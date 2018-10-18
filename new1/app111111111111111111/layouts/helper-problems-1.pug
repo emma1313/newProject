@@ -1,0 +1,30 @@
+.row
+    .container.member-title
+        .row.d-flex.justify-content-center
+            h1 帮助中心
+    .container.d-flex.justify-content-center.helper-container.align-items-start
+        .col-2.member-tags
+            include ./helperTabs.pug
+        //- 從此開始
+        .col-10.member-column-container
+            .single-column-content.member-content-container.helper-content-container
+
+                .form-group.row.small-title
+                    .col-12
+                        h4.text-danger 彩券的使用规则
+                        ul
+                            li 1.彩金消费抵用券是梦想旺彩频道免费发放给用户的购彩抵用券；
+                            li 2.彩金消费抵用券可在“我的彩票帐户”---“帐户明细”中查看；
+                            li 3.彩金消费抵用券可以在兑换彩票时使用；
+                            li 4.彩金消费抵用券只可一次性抵用，不找零；不可转让，不可提现；
+                            li 5.为保证用户帐户安全，彩金消费抵用券使用时我们会发送手机验证码，每天验证码最多接受20次短信；
+                            li 6.消费抵用券使用适用于单注兑换，复式投注及倍投，不能用于追号投注
+                        h4.text-danger 彩券的使用方法：
+                        p.helper-text 第一步：进入购彩大厅页面，选择要购买的彩种（以双色球为例），点击“立即领取”，进入领取页面。
+                        img(src="images/problems/1-1.jpg", alt="")
+                        p.helper-text 第二步：选号完成后“添加到投注列表”，点击“立即领取”；
+                        img(src="images/problems/1-2.jpg", alt="")
+                        p.helper-text 第三步：在支付页面，勾选“使用优惠券”付款。注意：消费抵用券只可以一次性抵扣使用，不找零，请注意您的订单金额与消费抵用券金额是否相符。
+                        img(src="images/problems/1-3.jpg", alt="")
+
+

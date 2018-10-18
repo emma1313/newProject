@@ -1,0 +1,79 @@
+.container-fluid.signin-container
+    .row.d-flex.justify-content-end
+        .signin-content
+            h3.text-center 登入
+
+
+            .signin-choose
+                .form-group.row.signin-input-container
+                    label.col-2.col-form-label.pr-0(for="useraccount") 帳號
+                    .col-8.input-group
+                        .input-group-prepend
+                            span.input-group-text
+                                i.fas.fa-user
+                                
+                        input.form-control.form-control-lg(type="text",id="useraccount",placeholder="请输入帐号")
+                    .col-2    
+                        small.text-danger 帐号错误
+                .form-group.row.signin-input-container
+                    label.col-2.col-form-label.pr-0(for="useraccount") 密码
+                    .col-8.input-group
+                        .input-group-prepend
+                            span.input-group-text
+                                i.fas.fa-unlock-alt
+                                
+                        input.form-control.form-control-lg(type="text",id="useraccount",placeholder="请输入密码")
+                    .col-2   
+                        small.text-danger 密码错误
+                .form-group.row.signin-input-container
+                    label.col-2.col-form-label.pr-0(for="verify") 验证码
+                    .col-4.input-group.mr-0.pr-0
+                        .input-group-prepend
+                            span.input-group-text
+                                i.fas.fa-unlock-alt   
+                        input.form-control.form-control-lg(type="text",id="verify",placeholder="")
+                    .col-3.ml-0.pl-0
+                        img(src="images/verificationCode.jpg", alt="")
+                    .col-1.p-0.m-0
+                        a(href="#")
+                            i.fas.fa-sync-alt
+                    .col-2   
+                        small.text-danger 验证码错误 
+                .row.d-flex.justify-content-center
+                    .col-7
+                        button.btn.btn-success.btn-lg.btn-block.p-2 登入  
+                        .forget.d-flex.justify-content-start
+                            a(href="#")
+                                span.text-mute 忘记帐号?
+                            a(href="#")
+                                span.text-mute 忘记密码?                         
+            .signin-choose.display-show   
+                .form-group.signinpage-wechat
+                    h1.wechatlogin-title 使用微信扫码登入
+                    img(src="images/wechatloginqrcode.jpeg", alt="") 
+                    p.text-danger 登入錯誤訊息  
+                    .offset-3.col-6.qrcode-instruction
+                        small 
+                            |完成注册后扫码绑定
+                            br
+                            |即可使用微信登入                    
+                   
+
+
+
+
+
+            .line     
+            //- .row.justify-content-center.forget.align-items-center
+            //-     a.login-choose-btn.d-flex.justify-content-center.align-items-center(href="")
+            //-         h4 WeChat登入
+            //-         .fastlogin-item
+            //-             i.fab.fa-weixin.fa-2x
+            .row.justify-content-center.forget.align-items-center
+                a.login-choose-btn.d-flex.justify-content-center.align-items-center(href="")
+                    h4 帳號登入
+                    .fastlogin-item
+                        i.fa.fa-user.fa-2x                    
+                
+
+                        

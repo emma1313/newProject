@@ -1,0 +1,63 @@
+.row
+    .container.d-flex.justify-content-center
+        .col-9.single-column-container
+            .single-column-title.text-center
+                h1 註冊
+            .single-column-content
+                .form-group.row
+                    label.col-3.col-form-label(for="code") 用户密码
+                    .col-5
+                        input.form-control(type="text",value="",id="code")
+                    .col-4
+                        p.form-text.text-muted 请输入6〜16个字符的密码
+                .form-group.row
+                    label.col-3.col-form-label(for="mrms") 称谓
+                    .col-5
+                        select.form-control(id="mrms")
+                            option 先生
+                            option 小姐
+                    .col-4
+                        p.form-text.text-danger 必填
+                .form-group.row
+                    label.col-3.col-form-label(for="mrms") 手机号码
+                    .col-5
+                        input.form-control(type="number",value="",id="phone")
+                    .col-4
+                        p.form-text.text-muted 请输入11位手机号码 
+                .form-group.row
+                    label.col-3.col-form-label(for="email") Email
+                    .col-5
+                        input.form-control(type="email",value="",id="emai")
+                    .col-4
+                        p.form-text.text-muted 
+                .form-group.row
+                    label.col-3.col-form-label(for="depositcode") 取款密码
+                    .col-5
+                        input.form-control(type="number",value="",id="depositcode")
+                    .col-4
+                        p.form-text.text-muted 请输入4位密码
+                .form-group.row
+                    label.col-3.col-form-label(for="confirmdepositcode") 确认取款密码
+                    .col-5
+                        input.form-control(type="number",value="",id="confirmdepositcode")
+                    .col-4
+                        p.form-text.text-muted 请再次输入4位取款密码  
+                .form-group.row.verifycode.align-items-center
+                    label.col-3.col-form-label(for="verify") 验证码
+                    .col-2
+                        input.form-control(type="text",value="",id="verify")
+                    .col-2.ml-0.pl-0
+                        img(src="images/verificationCode.jpg", alt="")
+                    .col-1.m-0.p-0
+                        i.fas.fa-sync-alt
+                    .col-3
+                        p.form-text.text-danger 验证码错误 
+                .alert.alert-warning.mt-4.mb-4
+                    h4.clert-heading 請注意
+                    .form-check
+                        input.form-check-input(type="radio")                    
+                        label.form-check-label(for="") 我已经年满18岁，已阅读并同意相关之条款与细则，且保证遵守当地法律规定。
+
+                .row.d-flex.justify-content-center.mb-4
+                    .col-8.mt-4
+                        button.btn.btn-success.btn-lg.btn-block.p-2 註冊                      

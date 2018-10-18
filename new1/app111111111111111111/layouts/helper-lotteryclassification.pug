@@ -1,0 +1,74 @@
+
+.row
+    .container.member-title
+        .row.d-flex.justify-content-center
+            h1 帮助中心
+    .container.d-flex.justify-content-center.helper-container.align-items-start
+        .col-2.member-tags
+            include ./helperTabs.pug
+        //- 從此開始
+        .col-10.member-column-container
+            .single-column-content.member-content-container.helper-content-container
+                .form-group.row.member-content-title
+                    .col-12
+
+                .form-group.row.small-title
+                    .col-12
+                        h4.text-danger 彩种介绍
+                        h5.text-danger 彩票
+                        .row
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/3d.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-fu.html").text-danger.card-title 福彩3D
+                                    p.card-text 选取3位数2元赢取1000元  
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/arrange3-2.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-a3.html").text-danger.card-title 排列3
+                                    p.card-text 选取3位数2元赢取1000元                                      
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/arrange5.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-a5.html").text-danger.card-title 排列5
+                                    p.card-text 选取5位数2元赢取100，000元                                                                
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/biglottery2.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-big.html").text-danger.card-title 大乐透
+                                    p.card-text 红球35选5,篮球12选23元赢取1600万
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/doublecolor2.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-double.html").text-danger.card-title 双色球
+                                    p.card-text 红球33选6,篮球16选12元赢取1000万                                
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/7star.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-sevenstar.html").text-danger.card-title 七星彩
+                                    p.card-text 选取7位数2元赢取500万                                 
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/11-5.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-elevenpickfive.html").text-danger.card-title 广东11选5
+                                    p.card-text 11选5，59％返奖率一个号码就中奖                                  
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/7lu.png", alt="")
+                                .card-body
+                                    a(href="helper-lottery-sevenla.html").text-danger.card-title 七乐彩
+                                    p.card-text 30选72元赢取500万      
+                        h5.text-danger 竞彩                            
+                        .row
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/basketball.png", alt="")
+                                .card-body
+                                    a(href="helper-lotterybasketball-1.html").text-danger.card-title 竞彩篮球
+                                    p.card-text 只猜胜负易中奖                                
+                            .card.helper-lottery-classification.mr-2
+                                img(src="images/lottery-icon/soccer.png", alt="")
+                                .card-body
+                                    a(href="helper-lotterysoccer-1.html").text-danger.card-title 竞彩足球
+                                    p.card-text 返奖率最高73%                                  
+                                        
+
+

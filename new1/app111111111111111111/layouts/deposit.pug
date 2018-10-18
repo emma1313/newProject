@@ -1,0 +1,57 @@
+.row
+    .container.member-title
+        .row.d-flex.justify-content-center
+            h1 会员中心
+    .container.d-flex.justify-content-center.member-container.align-items-start
+        .col-2.member-tags
+            include ./memberTabs.pug
+        .col-10.member-column-container
+            .single-column-content.member-content-container
+                .form-group.row.member-content-title
+                    .col-12
+                        h1.text-left 冲积分
+                .form-group.row.small-title 
+                    .col-12
+                        h4 
+                            i.fa.fa-tag
+                            | 帐号：
+                            span.big-text dfadfsdfa
+                            | 点数：
+                            span.big-text 2234324432
+
+                .form-group.row
+                    label.col-3.col-form-label(for="banknumber") 存入方式
+                    .col-5
+                        input.form-control(type="number",value="",id="banknumber",placeholder="银行代码") 
+                    .col-4
+                        p.form-text.text-muted 
+
+
+                .form-group.row
+                    label.col-3.col-form-label(for="amount") 冲积分额度
+                    .col-5
+                        input.form-control(type="number",value="",id="amount",placeholder="请输入冲积分额度") 
+                    .col-4
+                        p.form-text.text-muted 
+
+                .row
+                    .col-4.offset-3
+                        button.btn.btn-success.btn-lg.btn-block 送出
+                    .col-4
+                        button.btn.btn-secondary.btn-lg.btn-block 取消
+                .form-group.row.member-content-title.pt-5.orange-underline
+                    .col-12
+                        h1.text-left 冲积分记录
+                .form-group.row
+                    label.col-3.col-form-label(for="period") 时间区间
+                    .col-5
+                        select.form-control(id="period")
+                            option 今天
+                            option 昨天
+                            option 一周
+
+                .form-group.row
+                    img(src="images/material/tabs3.jpg", alt="")                        
+                        
+                        
+                

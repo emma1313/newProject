@@ -1,0 +1,32 @@
+
+.row
+    .container.member-title
+        .row.d-flex.justify-content-center
+            h1 会员中心
+    .container.d-flex.justify-content-center.member-container.align-items-start
+        .col-2.member-tags
+            include ./memberTabs.pug
+        //- 從此開始
+        .col-10.member-column-container
+            .single-column-content.member-content-container
+                .form-group.row.member-content-title
+                    .col-12
+                        h1.text-left 转点纪录
+                .form-group.row.small-title
+                    .col-12
+                        h4 
+                            i.fa.fa-tag
+                            | 帳號：
+                            span.big-text dfadfsdfa
+                            | 點數：
+                            span.big-text 2234324432
+                .form-group.row
+                    label.col-3.col-form-label(for="period") 时间区间
+                    .col-5
+                        select.form-control(id="period")
+                            option 今天
+                            option 昨天
+                            option 一周
+
+                .form-group.row
+                    img(src="images/material/table4.jpg", alt="")

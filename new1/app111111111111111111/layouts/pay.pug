@@ -1,0 +1,56 @@
+.row
+    .container
+        .col-12.pay-container
+            .col-3.pay-left
+                h1 支付中心
+            .col-9.pay-right
+                form
+                    .pay-item.pay-user
+                        p 當前帳號
+                        span.user-name adfsdf3333
+                    .pay-user-photo
+                        img(src="images/avatar/member1.jpg", alt="")
+                        p 白金會員
+                    .pay-item.pay-des
+                        p 說明
+                        .info 
+                            ul
+                                li 以下說明請不要理會。
+                                li 如果您的支付宝账户中有足够的余额，可选用此方式进行支付。
+                                li 充值过程中若有问题，请拨打1768游戏客服热线：400-108-1768
+                                li 充值过程中若有问题，请拨打1768游戏客服热线：400-108-1768
+                                li 充值过程中若有问题，请拨打1768游戏客服热线：400-108-1768
+                                li 充值过程中若有问题，请拨打1768游戏客服热线：400-108-1768
+                    .pay-item.pay-methods-title
+                        p 支付方式
+                    .pay-methods-container
+                        input#tab1(type='radio', name='tabs', checked='')
+                        label(for='tab1') 
+                            img(src="images/pay/ALIPAYAPP.jpg", alt="")
+                            |支付寶
+                        input#tab2(type='radio', name='tabs')
+                        label(for='tab2')
+                            img(src="images/pay/WEIXINJSAPI.jpg", alt="")
+                            |微信支付                            
+                        //- input#tab3(type='radio', name='tabs')
+                        //- label(for='tab3') 更多支付方式
+
+                        .clear
+                        .content
+                            #content1
+                                span.pay-title 支付寶扫码支付
+                                img(src="images/qrcode.png", alt="")
+                                .pay-submit
+                                    .price-text 應付金額
+                                    .price  1000元
+                                    button 立即支付
+                            #content2
+                                span.pay-title 微信扫码支付
+                                img(src="images/qrcode.png", alt="")
+                                .pay-submit
+                                    .price-text 應付金額
+                                    .price  299元
+                                    button 立即支付
+                            //- #content3
+                                
+

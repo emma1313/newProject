@@ -1,0 +1,147 @@
+.row
+    .container.member-title
+        .row.d-flex.justify-content-center
+            h1 会员中心
+    .container.d-flex.justify-content-center.member-container.align-items-start
+        .col-2.member-tags
+            include ./memberTabs.pug
+        .col-10.member-column-container
+            .single-column-content.member-content-container
+                .form-group.row.member-content-title
+                    .col-12
+                        h1.text-left 会员资料设定
+                .form-group.row.small-title
+                    .col-12
+                        h4 
+                            i.fa.fa-tag
+                            |一般设定
+                .form-group.row
+                    label.col-3.col-form-label(for="account") 帳號
+                    .col-5
+                        input.form-control(type="text",value="sd****as",id="account",disabled) 
+                    .col-4
+                        p.form-text.text-muted 
+                .form-group.row
+                    label.col-3.col-form-label(for="name") 真实姓名
+                    .col-5
+                        input.form-control(type="text",value="王大明",id="name") 
+                    .col-4
+                        p.form-text.text-muted 
+                .form-group.row
+                    label.col-3.col-form-label(for="phone") 手机号码
+                    .col-5
+                        input.form-control(type="number",value="13228381541",id="phone",disabled) 
+                    .col-4
+                        p.form-text.text-muted                         
+                .form-group.row
+                    label.col-3.col-form-label(for="name") 真实姓名
+                    .col-5
+                        input.form-control(type="text",value="王大明",id="name") 
+                    .col-4
+                        p.form-text.text-muted                         
+                .form-group.row
+                    label.col-3.col-form-label(for="email") 信箱
+                    .col-5
+                        input.form-control(type="email",value="",id="email",placeholder="pingan@pingan.com") 
+                    .col-4
+                        p.form-text.text-muted 
+                //- .form-group.row
+                //-     label.col-3.col-form-label(for="communication") 通讯软体
+                //-     .col-5
+                //-         select.form-control
+                //-             option 微信
+                //-             option QQ
+                //-     .col-4
+                //-         p.form-text.text-muted 
+                .form-group.row
+                    label.col-3.col-form-label(for="communication-account") 绑定微信
+                    .col-5.bingWechatQrcode
+                        img(src="images/wechatloginqrcode.jpeg", alt="")
+                        p.form-text.text-muted.text-center 请使用微信扫描二维码登录   
+                    .col-4                          
+                .row
+                    .col-4.offset-3
+                        button.btn.btn-success.btn-lg.btn-block 送出
+                    .col-4
+                        button.btn.btn-secondary.btn-lg.btn-block 取消
+
+                .form-group.row.small-title
+                    .col-12
+                         h4 
+                            i.fa.fa-tag
+                            |手机验证
+                .row
+                    .col-4.offset-3
+                        button.btn.btn-danger.btn-lg.btn-block 送出验证码
+
+                .form-group.row
+                    label.col-3.col-form-label(for="phone") 验证码
+                    .col-5
+                        input.form-control(type="number",value="132",id="phone",disabled)
+                    .col-4
+                        button.btn.btn-dark 已完成验证
+                .form-group.row
+                    label.col-3.col-form-label(for="phone") 验证码
+                    .col-5
+                        input.form-control(type="number",value="132",id="phone")
+                    .col-4
+                        button.btn.btn-success 送出
+
+                
+
+
+                .form-group.row.small-title
+                    .col-12
+                         h4 
+                            i.fa.fa-tag
+                            |密码修改
+                .form-group.row
+                    label.col-3.col-form-label(for="oldcode") 旧密码
+                    .col-5
+                        input.form-control(type="number",value="",id="oldcode")
+                    .col-4
+                        p.form-text.text-muted 请输入旧密码 
+                .form-group.row
+                    label.col-3.col-form-label(for="newcode") 新密码
+                    .col-5
+                        input.form-control(type="number",value="",id="newcode")
+                    .col-4
+                        p.form-text.text-muted 请输入新密码
+                .form-group.row
+                    label.col-3.col-form-label(for="renewcode") 确认新密码
+                    .col-5
+                        input.form-control(type="number",value="",id="renewcode")
+                    .col-4
+                        p.form-text.text-muted 请确认新密码                        
+                        
+                .row
+                    .col-4.offset-3
+                        button.btn.btn-success.btn-lg.btn-block 送出
+                    .col-4
+                        button.btn.btn-secondary.btn-lg.btn-block 取消
+                .form-group.row.small-title
+                    .col-12
+                         h4 
+                            i.fa.fa-tag
+                            |银联卡
+                //- .form-group.row
+                //-     label.col-3.col-form-label(for="bankcode") 银行代码
+                //-     .col-5
+                //-         select.form-control(id="bankcode")
+                //-             option 微信
+                //-             option 支付寶
+                //-     .col-4
+                //-         p.form-text.text-muted 
+                .form-group.row
+                    label.col-3.col-form-label(for="bankaccount") 帐号
+                    .col-5
+                        input.form-control(type="number",value="",id="bankaccount")
+                    .col-4
+                        p.form-text.text-muted 
+                     
+                        
+                .row
+                    .col-4.offset-3
+                        button.btn.btn-success.btn-lg.btn-block 送出
+                    .col-4
+                        button.btn.btn-secondary.btn-lg.btn-block 取消               
