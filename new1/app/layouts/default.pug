@@ -4,46 +4,31 @@ html.no-js(lang='')
     meta(charset='utf-8')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title super8
+    title 
     link(rel="shortcut icon",href="/favicon.ico",type="image/x-icon")
     link(rel="icon",href="/favicon.icon",type="images/x-icon")
 
-    // Place favicon.ico in the root directory
-
     // build:css styles/vendor.css
-    link(rel="stylesheet", href="styles/bootstrap.min.css")
-    // endbower
-    // endbuild
+    link(rel="stylesheet", href="styles/fontawesome/css/all.css")
+    link(rel='stylesheet', href='styles/bootstrap.css')
+    link(rel="stylesheet", href="styles/swiper.min.css")
 
     // build:css styles/main.css
-    link(rel="stylesheet",href="https://use.fontawesome.com/releases/v5.1.0/css/all.css",integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt",crossorigin="anonymous")
     link(rel='stylesheet', href='styles/main.css')
-    // endbuild
 
-    // build:js scripts/vendor/modernizr.js
-
-    // endbuild
   body
+    include nav-main.pug
+    block content
+    include footer.pug
 
-    .container
-      block content
-
-        
-
-    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    
 
 
     // build:js scripts/vendor.js
-    // bower:js
-    script(src='/bower_components/jquery/dist/jquery.js')
-    // endbower
-    // endbuild
-
-    // build:js scripts/plugins.js
-  
-    
-    // endbuild
+    script(src="scripts/jq.js")
+    script(src='scripts/jquery.min.js')
+    script(src='scripts/popper.js')
+    script(src='scripts/bootstrap.js')
 
     // build:js scripts/main.js
     script(src='scripts/main.js')
-    // endbuild
