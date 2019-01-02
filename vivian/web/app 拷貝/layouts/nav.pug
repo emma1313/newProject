@@ -1,0 +1,104 @@
+.container-fluid.header-nav_bg.fixed-top
+    .container
+        .row.nav-bg
+            .col-9
+                //跑馬燈 
+                .marquee-box
+                    svg.marquee-icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 512 512', xml:space='preserve')
+                        path.st0(d='M375.4,169V76.7c0-4.8-2.6-9.1-6.9-11.3c-4.2-2.2-9.3-1.9-13.3,0.8c-91.8,63.5-144.5,71.6-180.1,71.6H73.2\
+                        C32.8,137.9,0,170.7,0,211v27.2c0,40.3,32.8,73.2,73.2,73.2h48.9l53.1,128.7c2,4.9,6.8,7.9,11.8,7.9c1.7,0,3.2-0.3,4.9-0.9\
+                        c6.6-2.7,9.6-10.1,7-16.7l-49.1-119H175c124.2,0,175,65.8,177.3,68.8c2.5,3.3,6.3,5.2,10.2,5.2c1.4,0,2.7-0.2,4-0.6\
+                        c5.2-1.8,8.8-6.6,8.8-12.1v-92.2c25.4-5.9,44.3-28.5,44.3-55.7C419.8,197.6,400.8,174.8,375.4,169z M25.6,238.2V211\
+                        c0-26.2,21.3-47.6,47.6-47.6h44.7v122.3H73.2C46.9,285.8,25.6,264.5,25.6,238.2z M349.8,341.8c-28.4-23.4-84.3-56-174.8-56h-31.6\
+                        V163.5H175c36.6,0,89.1-7.5,174.8-62.7V341.8z M375.4,253.5v-57.6c11.1,4.9,18.7,16,18.7,28.9\
+                        C394.2,237.5,386.5,248.6,375.4,253.5z')
+                        path.st0(d='M499.1,211.9h-50.1c-7.1,0-12.9,5.7-12.9,12.9s5.7,12.9,12.9,12.9h50.1c7.1,0,12.9-5.7,12.9-12.9\
+                        C512,217.5,506.3,211.9,499.1,211.9z')
+                        path.st0(d='M431.3,184.9c2,5,6.8,8.2,11.9,8.2c1.6,0,3.1-0.3,4.7-0.8l48.5-19c6.6-2.6,9.8-10,7.2-16.6\
+                        c-2.6-6.6-10-9.8-16.6-7.2l-48.5,19C432,170.9,428.8,178.3,431.3,184.9z')
+                        path.st0(d='M496.4,276.1l-48.5-19c-6.6-2.6-14,0.6-16.6,7.2c-2.6,6.6,0.6,14,7.2,16.6l48.5,19c1.6,0.6,3.1,0.8,4.7,0.8\
+                        c5.1,0,9.9-3.1,11.9-8.2C506.3,286.1,503,278.7,496.4,276.1z')
+                    .marquee-item
+                        span.marquee-item_tit @Name:
+                        span.marquee-item_con 免費註冊免費註冊免費註冊免費註冊免費註冊免費註冊
+                    .marquee-item
+                        span.marquee-item_tit @Name:
+                        span.marquee-item_con This is the first tweet.
+                    .marquee-item
+                        span.marquee-item_tit @Name:
+                        span.marquee-item_con This is the first tweet.
+            .col-3.d-flex.justify-content-end.align-items-center
+                //登入前選單
+                a.b-outlineLight.mr-4(href="registered.html", title="免費註冊") 免費註冊
+                a.d-flex.align-items-center.mr-2(href="#", data-toggle='modal', data-target='#exampleModalCenter', title="登入")
+                    svg.svg-light_a(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 512 512', xml:space='preserve')
+                        path.st0(d='M250,497.3c0,8.1,6.5,14.7,14.7,14.7h133.5c52.4,0,95.1-42.6,95.1-95.1V95.1c0-52.4-42.6-95.1-95.1-95.1H262.5\
+                        c-8.1,0-14.7,6.5-14.7,14.7s6.5,14.7,14.7,14.7h135.7c36.2,0,65.7,29.4,65.7,65.7v321.8c0,36.2-29.4,65.7-65.7,65.7H264.7\
+                        C256.6,482.7,250,489.2,250,497.3z')
+                        path.st0(d='M376.7,245.7l-93.2-93.2c-5.8-5.8-15-5.8-20.8,0s-5.8,15,0,20.8l68.2,68.2H33.4c-8.1,0-14.7,6.5-14.7,14.7\
+                        s6.5,14.7,14.7,14.7H331L262.8,339c-5.8,5.8-5.8,15,0,20.8c2.8,2.8,6.6,4.3,10.3,4.3s7.5-1.4,10.3-4.3l93.2-93.2\
+                        C382.5,260.7,382.5,251.3,376.7,245.7z')
+                .dropdown.show
+                    a.btn.dropdown-toggle.arrow-none(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        img.nav-img(src="images/c.png", alt="简体")
+                    .dropdown-menu(aria-labelledby="dropdownMenuLink") 
+                        a.dropdown-item(href="#") 
+                            img.nav-img.mr-1(src="images/c.png", alt="简体") 
+                            | 简体
+                        a.dropdown-item(href="#") 
+                            img.nav-img.mr-1(src="images/h.png", alt="繁體") 
+                            | 繁體
+                        a.dropdown-item(href="#") 
+                            img.nav-img.mr-1(src="images/v.png", alt="Tiếng Việt") 
+                            | Tiếng Việt
+    //logo
+    a.d-block.logo.mx-auto(href="index.html")  
+    //go top
+    a.go-top(href="#" onclick="topFunction()")
+        i.fas.fa-angle-up.fa-2x.d-flex.justify-content-center.align-items-center    
+
+// 登入 Modal
+.modal.fade#exampleModalCenter(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .modal-body
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    i.fas.fa-times.m-dark(aria-hidden='true')
+                h4.w-100.text-center.gray.my-4
+                    .fas.fa-user-circle.fa-2x
+                form.needs-validation(novalidate)
+                    .form-row.px-5
+                        .col-12.mb-4
+                            input#validationCustom01.form-control.py-2(type='text', placeholder='請輸入帳號', required)
+                        .col-12.mb-4
+                            input#input-password-confirm.form-control.py-2(type='password', placeholder='請輸入密碼', required)
+                            i#i-password-confirm.far.fa-eye-slash.fa-lg.c-blue.login-input_i.pl-3.d-flex(onclick="hideShowPsw2()")
+                        .col-6.mb-4
+                            input#validationCustom01.form-control.py-2(type='text', placeholder='請輸入驗證碼', required)
+                        .col-6.mb-4.d-flex.align-items-center
+                            img(src="images/captcha.png")
+                            i.fas.fa-redo.fa-lg.c-blue.cursor-p.ml-4
+                        .col-12
+                            .text-center
+                                a.c-blue(href="#", data-toggle='modal', data-target='#forgetModalCenter', data-dismiss='modal', aria-label='Close', title="忘記密碼") 忘記密碼 ?
+                        button.btn.btn-primary.btn-lg.btn-block.mt-4.mb-5(type='submit') 登入
+
+// 忘記密碼 Modal
+.modal.fade#forgetModalCenter(tabindex='-1', role='dialog', aria-labelledby='forgetModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .modal-body
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    i.fas.fa-times.m-dark(aria-hidden='true')
+                h3.text-center.gray.my-4
+                    |忘記密碼
+                    .fas.fa-question
+                h6.text-center.gray.mb-4
+                    |請輸入帳號，我們將傳送新密碼至您的註冊手機
+                form.needs-validation(novalidate)
+                    .form-row.px-5
+                        .col-12.mb-4
+                            input#validationCustom01.form-control.py-2(type='text', placeholder='請輸入帳號', required)
+                        button.btn.btn-primary.btn-lg.btn-block.mt-4.mb-5(type='submit') 
+                            i.fas.fa-envelope.mr-2
+                            |取得簡訊驗證碼

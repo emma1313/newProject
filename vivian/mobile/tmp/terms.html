@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vivian mobile</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.icon" type="images/x-icon">
+    <!-- build:css styles/vendor.css-->
+    <link rel="stylesheet" href="styles/fontawesome/css/all.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/swiper.min.css">
+    <!-- build:css styles/main.css-->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="container-fluid fixed-top d-flex align-items-center bg-dark nav-height">
+      <div class="container nav-bg">
+        <div class="row">
+          <!--login-->
+          <div class="col-3"><a class="nav-login" href="#">
+              <div class="nav-login_close"></div>
+              <svg id="svg-hide" viewbox="0 0 512 512">
+                <path d="M250,497.3c0,8.1,6.5,14.7,14.7,14.7h133.5c52.4,0,95.1-42.6,95.1-95.1V95.1c0-52.4-42.6-95.1-95.1-95.1H262.5                        c-8.1,0-14.7,6.5-14.7,14.7s6.5,14.7,14.7,14.7h135.7c36.2,0,65.7,29.4,65.7,65.7v321.8c0,36.2-29.4,65.7-65.7,65.7H264.7                        C256.6,482.7,250,489.2,250,497.3z"></path>
+                <path d="M376.7,245.7l-93.2-93.2c-5.8-5.8-15-5.8-20.8,0s-5.8,15,0,20.8l68.2,68.2H33.4c-8.1,0-14.7,6.5-14.7,14.7                        s6.5,14.7,14.7,14.7H331L262.8,339c-5.8,5.8-5.8,15,0,20.8c2.8,2.8,6.6,4.3,10.3,4.3s7.5-1.4,10.3-4.3l93.2-93.2                        C382.5,260.7,382.5,251.3,376.7,245.7z"></path>
+              </svg></a></div>
+          <!--logo-->
+          <div class="col-6"><a class="nav-logo" href="index.html"></a></div>
+          <!--menu-->
+          <div class="col-3"><a class="nav-menuWrapper ml-auto" href="#">
+              <div class="nav-menu"></div></a></div>
+          <!--menu content-->
+          <div class="col-12 nav-invisible_menu text-white">
+            <div class="nav-menu_content m-3"><a class="link-darkWhite px-2" href="logout-language.html"><i class="fas fa-globe-asia mr-2"></i>語系</a></div>
+          </div>
+          <!--login & registered content-->
+          <div class="col-12 nav-invisible_login px-0">
+            <!--tab nav-->
+            <ul class="nav nav-tabs nav-fill my-4 fadeIn animated" id="myTab" role="tablist">
+              <li class="nav-item"><a class="nav-link a-grayBlue active" id="home-tab" data-toggle="tab" href="#login" role="tab">登入</a></li>
+              <li class="nav-item"><a class="nav-link a-grayBlue" id="profile-tab" data-toggle="tab" href="#registered" role="tab">註冊</a></li>
+            </ul>
+            <div class="tab-content fadeIn animated" id="myTabContent">
+              <!--form 登入-->
+              <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab"> 
+                <form class="needs-validation" novalidate>
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <input class="form-control pl-45 py-2" id="validationCustom01" type="text" placeholder="請輸入帳號" required>
+                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                    </div>
+                    <div class="col-12 mb-4">
+                      <input class="form-control login-icon_password pl-45 py-2" id="input-password_login" type="password" placeholder="請輸入密碼" required>
+                      <div class="login-icon_account"><i class="fas fa-lock text-secondary"></i></div><i class="far fa-eye-slash fa-lg link-lightBlue login-input_i pl-3 d-flex" id="i-password_login" onclick="hideShowPswLogin()"></i>
+                    </div>
+                    <div class="col-12 mb-4">
+                      <input class="form-control py-2" id="validationCustom02" type="text" placeholder="請輸入驗證碼" required>
+                      <div class="login-input_img"></div>
+                    </div>
+                    <div class="col-12 mb-4">
+                      <div class="text-center"><a class="c-blue" href="#" data-toggle="modal" data-target="#forgetModalCenter" data-dismiss="modal" aria-label="Close" title="忘記密碼">忘記密碼 ?</a></div>
+                    </div>
+                    <button class="btn btn-primary btn-block mb-5" type="submit">登入</button>
+                  </div>
+                </form>
+              </div>
+              <!--form 註冊-->
+              <div class="tab-pane fade" id="registered" role="tabpanel" aria-labelledby="profile-tab"> 
+                <form class="needs-validation" novalidate>
+                  <!--帐号-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <input class="form-control pl-45 py-2" type="text" placeholder="請輸入帐号" required>
+                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                    </div>
+                  </div>
+                  <!--密码-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <input class="form-control pl-45 py-2" id="input-password_registered" type="password" placeholder="請輸入密碼" required>
+                      <div class="login-icon_account"><i class="fas fa-lock text-secondary"></i></div><i class="far fa-eye-slash fa-lg link-lightBlue login-input_i pl-3 d-flex" id="i-password_registered" onclick="hideShowRegistered()"></i>
+                      <div class="invalid-feedback">請輸入密碼</div>
+                    </div>
+                  </div>
+                  <!--确认密码-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <input class="form-control pl-45 py-2" id="input-password_confirm" type="password" placeholder="請輸入確認密碼" required>
+                      <div class="login-icon_account"><i class="fas fa-lock text-secondary"></i></div><i class="far fa-eye-slash fa-lg link-lightBlue login-input_i pl-3 d-flex" id="i-password_confirm" onclick="hideShowConfirm()"></i>
+                      <div class="invalid-feedback">請輸入密碼</div>
+                    </div>
+                  </div>
+                  <!--通訊軟體-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <select class="custom-select py-2" required>
+                        <option selected="">請選擇通訊軟體</option>
+                        <option value="1">WeChat</option>
+                        <option value="2">Line</option>
+                        <option value="2">WhatsApp</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!--通訊軟體帳號-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <input class="form-control pl-45 py-2" type="text" placeholder="請輸入通訊軟體帳號" required>
+                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                      <div class="font-14 text-danger mt-1"><i class="fas fa-exclamation-triangle mr-2"></i>註冊後即無法更改</div>
+                    </div>
+                  </div>
+                  <!--手机号码-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <input class="form-control pl-45 py-2" type="text" placeholder="請輸入手机号码" required>
+                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                      <div class="font-14 text-danger mt-1"><i class="fas fa-exclamation-triangle mr-2"></i>註冊後即無法更改</div>
+                      <button class="btn btn-outline-primary w-auto my-3 px-4" type="button">發送簡訊驗證碼</button>
+                    </div>
+                  </div>
+                  <!--簡訊驗證碼-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-4">
+                      <input class="form-control pl-45 py-2" type="text" placeholder="請輸入簡訊驗證碼" required>
+                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                    </div>
+                  </div>
+                  <!--同意服务条款-->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-5">
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input position-absolute" id="customCheck1" type="checkbox">
+                        <label class="custom-control-label checkbox-border" for="customCheck1">
+                           我已年满18岁，并同意投注相关规范以及<a class="c-blue" href="terms.html" target="_blank">服务条款</a></label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--btn -->
+                  <div class="form-row mx-3">
+                    <div class="col-12 mb-5">
+                      <button class="btn btn-primary px-5 mr-2" type="submit" value="Submit" data-toggle="modal" data-target="#registeredModalCenter">註冊</button>
+                      <button class="btn btn-outline-secondary px-5" type="reset" value="Reset">重填</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 忘記密碼 Modal-->
+    <div class="modal fade" id="forgetModalCenter" tabindex="-1" role="dialog" aria-labelledby="forgetModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times m-dark" aria-hidden="true"></i></button>
+            <h4 class="text-center gray my-5">忘記密碼
+              <div class="fas fa-question"></div>
+            </h4>
+            <h6 class="text-center gray mb-4">請輸入帳號，我們將傳送新密碼至您的註冊手機</h6>
+            <form class="needs-validation" novalidate>
+              <div class="form-row px-5">
+                <div class="col-12 mb-5">
+                  <input class="form-control py-2" id="validationCustom03" type="text" placeholder="請輸入帳號" required>
+                </div>
+                <button class="btn btn-primary w-100 mb-5" type="submit"> <i class="fas fa-envelope mr-2"></i>取得簡訊驗證碼</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container"><a class="go-top" href="#" onclick="topFunction()"><i class="fas fa-angle-up fa-lg d-flex justify-content-center align-items-center"></i></a>
+      <div class="row">
+        <div class="col-12 m-gray mt-48 px-4">
+          <h4 class="m-grayLight mt-5"><i class="fas fa-feather-alt fa-fw"></i>服务条款</h4>
+          <hr>
+          <h6 class="mb-4">一、遵守会员规范及法律规定：</h6>
+          <p>您了解您注册成为会员后，即可使用本公司所提供之各项服务(以下称本服务)。当会员使用本服务时，即表示除了同意遵守本服务条款外，还同意接受本公司对会员规范(包括各项游戏规则、球赛投注规则、公告及注意事项等)及相关法令规定之拘束，本公司菲律宾公司s8娱乐城- super8所有产品与客户服务、软件系统、网络架构等相关业务事宜，请使用本服务之会员请遵守使用者当地法令之许可，如有违反之情事恕非本服务之负责范围。</p>
+          <h6 class="mt-5 mb-4">二、服务简介：</h6>
+          <p>(a) 本公司旨在创造一个『安全可靠』、『即时便利』、『公平公正』、『专业营运』的优质娱乐服务平台，强调的让会员不受时空的限制，24小时随时上线就可以参与一个公​​平公正的游戏，亦可以享受到与世界各地玩家切磋的乐趣，我们秉持以客为尊的态度，不断开发创新及了解客户需求是本公司引以为傲的经营理念，翼望能创造出崭新的娱乐价值以及达到多方普及的目的，成为具有领导指标性的娱乐网站。 </p>
+          <p>(b) 虚拟货币银行服务：本公司提供网路金流付费平台，你所购买的点数将可享受符合本公司平台的服务。若您使用虚伪不正之方式进行「储值」，本公司也将保留随时终止您会员资格及使用各项服务之权利。 </p>
+          <h6 class="mt-5 mb-4">三、真实登录义务：</h6>
+          <p>基于本公司所提供之各项服务，您同意于注册时依注册申请程序所提示之项目，登录您本人正确、真实及完整之个人资料；当您的个人资料有异动时，请立即更新，以维持您个人资料之正确、真实及完整。如因您登录不实资料或冒用他人名义以致于侵害他人之权利或违法时，应自负法律责任；您并同意您所提供之个人资料不实或个人资料有异动但没有更新以致于与原登录之资料不符时，本公司有权随时终止您的会员资格及使用各项会员服务之权利。</p>
+          <h6 class="mt-5 mb-4">四、服务之停止与更改：</h6>
+          <ul>
+            <li>会员登录之资料不实。</li>
+            <li>使用他人的名义申请本服务。</li>
+            <li>违反游戏公平原则。</li>
+            <li>参与游戏或比赛时，故意钻研系统漏洞或利用游戏弱点以影响结果。</li>
+            <li>违反本服务条款时。</li>
+            <li>同一个ip.同一身分的人只能拥有一个游戏帐号, 若发现会员重复申请帐号行为时，若使用多只帐号进行游戏，经风控部门发现，一律停权。同一姓名 / 帐户 / 电话号码 / ＩＰ位置 / 共享电脑 / 网路环境，仅限申请一次</li>
+            <li>本公司不允许不公平的下注方式、双边下注、无风险下注及任何无风险解冻之下注方式，如有发现上述问题之玩家，本公司有终止玩家帐号使用之权力。如有任何争议问题，本公司有最终决定权。无论任何情形，就停止或更改服务或终止会员帐户服务所可能产生之困扰、不便或损害，本服务对任何会员或第三人均不负任何责任。</li>
+          </ul>
+          <h6 class="mt-5 mb-4">五、服务暂停或中断：</h6>
+          <p>(一) 本公司于下列情形之一时，得暂停或中断本服务之全部或一部，对于使用者不负担任何赔偿责任：</p>
+          <ul> 
+            <li>1.对于本服务相关系统设备进行迁移、更换或维护时。</li>
+            <li>2.因不可归责于本公司所造成服务停止或中断。</li>
+            <li>3.因不可抗力所造成服务停止或中断</li>
+          </ul>
+          <p>(二) 如因本公司对于本网站相关系统设备进行迁移、更换或维护而必须暂停或中断全部或一部之服务时，本公司于暂停或中断前将以电子邮件通知或于本网站上公告。</p>
+          <p>(三) 如因本公司对于本网站相关系统设备进行迁移、更换或维护而必须暂停或中断全部或一部之服务时，本公司于暂停或中断前将以电子邮件通知或于本网站上公告。</p>
+          <h6 class="mt-5 mb-4">六、保管义务：</h6>
+          <p>会员有义务妥善保管在本网站之帐号与密码，并为此组帐号与密码登入系统后所进行之一切活动负责。为维护会员自身权益，请勿将帐号与密码泄露或提供予第三人知悉，或出借或转让他人使用。</p>
+          <h6 class="mt-5 mb-4">七、同意各项球赛及游戏规则：</h6>
+          <p>为避免使用者于本平台投注球赛或游戏时产生争议，各项规则于游戏中心和球赛中心均有详细说明，请务必详细阅读本服务所定之各项规则，会员一经开始使用本服务，即被视为已接受所有之规定。</p>
+          <h6 class="mt-5 mb-4">八、会员规范之增订及修改：</h6>
+          <p>本服务条款如有增订或修改，您同意自该修订条款于本网站公告之时起受其拘束，本网站将不对会员个别通知。如您于公告后继续使用本服务，则视为您已经同意该修订条款。</p>
+          <h6 class="mt-5 mb-4">九、额外声明：</h6>
+          <p>部份地区或国家法律尚未明定线上博彩的合法性问题，甚至某些地区或国家已明确规范线上博彩为非法行为。我们无意邀请任何人在这些地区或国家非法使用本服务平台。使用者必需确定在您所居住的地区或国家使用线上博彩是否合法，并负完全的责任，使用本服务之会员请遵守使用者当地法令之许可，如有违反之情事恕非本公司之负责范围。</p>
+        </div>
+      </div>
+      <div class="footer-copyright my-5"> 
+        <div class="m-gray mb-2">Copyright © 2019 Super8 Inc All rights reserve</div><a class="mr-3" href="about.html">關於我們</a><a class="mr-3" href="terms.html">服務條款</a><a class="mr-3" href="privacy.html">隱私權聲明</a><a href="statement.html">免責聲明</a>
+      </div>
+    </div>
+    <!-- build:js scripts/vendor.js-->
+    <script src="scripts/jq.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/popper.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/swiper.min.js"></script>
+    <!-- build:js scripts/main.js-->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

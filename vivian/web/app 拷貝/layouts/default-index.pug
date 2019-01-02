@@ -1,0 +1,37 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title vivian web
+    link(rel="shortcut icon",href="/favicon.ico",type="image/x-icon")
+    link(rel="icon",href="/favicon.icon",type="images/x-icon")
+
+    // build:css styles/vendor.css
+    link(rel="stylesheet", href="styles/fontawesome/css/all.css")
+    link(rel='stylesheet', href='styles/bootstrap.css')
+    link(rel="stylesheet", href="styles/swiper.min.css")
+
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+
+  body
+    include nav.pug
+    include index-slider.pug
+    .container
+      block content
+    include index-footer.pug
+
+    
+
+
+    // build:js scripts/vendor.js
+    script(src='scripts/jquery.min.js')
+    script(src='scripts/popper.js')
+    script(src='scripts/bootstrap.js')
+    script(src='scripts/jquery.marquee.min.js')
+    script(src='scripts/swiper.min.js')
+
+    // build:js scripts/main.js
+    script(src='scripts/main.js')

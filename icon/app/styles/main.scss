@@ -1,0 +1,74 @@
+//變量 主色系
+$m-dark: #272727;
+$m-gray: #555555;
+$m-grayLight: #666666;
+$m-light: #e0e0e0;
+$m-blue: #007bff;
+$m-blueLight: #00beff;
+
+//主色系
+.m-dark{ color: #272727;}
+.m-gray{ color: #555555;}
+.m-grayLight{ color: #666666;}
+.m-light{ color: #e0e0e0;}
+.m-blue{ color: #007bff;}
+.m-blueLight{ color: #00beff;}
+.m-skin{ color: #ce6563;}
+
+//輔色系
+.a-grayBlue { color: #6c757d;}
+
+//變量 高度
+$Height-1: 1px;
+$height-22: 22px;
+$height-48: 48px;
+$height-100: 100%;
+
+//圓角
+.rounded-left:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+.rounded-right:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+//連結色
+$brightess-dark: brightness(80%);
+$brightess-light: brightness(120%);
+.link-darkWhite {
+  color: white;
+  &:hover {
+    color: white;
+    filter: $brightess-dark;
+  }
+}
+.link-lightBlue {
+  color: $m-blue;
+  &:hover {
+    color: $m-blue;
+    filter: $brightess-light;
+  }
+}
+.link-lightGray {
+  color: $m-gray;
+  &:hover {
+    color: $m-gray;
+    filter: $brightess-light;
+  }
+}
+
+body { background: $m-light;}
+
+img {
+  width: 25px;
+}
+
+
+
+
