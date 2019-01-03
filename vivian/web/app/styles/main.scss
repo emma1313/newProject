@@ -728,6 +728,17 @@ body {
   left:36%;
 }
 
+.member-transfer_svg {
+  width: 16px;
+  height: 24px;
+  fill: $m-blue;
+}
+
+.modal-title_svg {
+  width: 22px;
+  height: 22px; 
+}
+
 .wallet-form {
   &:hover {
     background: $m-light;

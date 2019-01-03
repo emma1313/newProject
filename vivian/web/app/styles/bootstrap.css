@@ -2645,6 +2645,10 @@ fieldset:disabled a.btn {
   border-color: #007bff;
 }
 
+.btn-outline-primary:hover > svg {
+  fill: #fff;
+}
+
 .btn-outline-primary:focus, .btn-outline-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
@@ -7347,6 +7351,10 @@ button.bg-dark:focus {
 
 .w-50 {
   width: 50% !important;
+}
+
+.w-60 {
+  width: 60% !important;
 }
 
 .w-75 {

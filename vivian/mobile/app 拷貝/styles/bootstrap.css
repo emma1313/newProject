@@ -1523,7 +1523,7 @@ pre code {
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #6a757e;
 }
 
 .table thead th {
@@ -2340,7 +2340,6 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 
 .btn:focus, .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .btn.disabled, .btn:disabled {
@@ -2645,6 +2644,10 @@ fieldset:disabled a.btn {
   border-color: #007bff;
 }
 
+.btn-outline-primary:hover > svg{
+  fill: #fff;
+}
+
 .btn-outline-primary:focus, .btn-outline-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
@@ -2912,13 +2915,11 @@ fieldset:disabled a.btn {
 
 .btn-link:hover {
   color: #0056b3;
-  text-decoration: underline;
   background-color: transparent;
   border-color: transparent;
 }
 
 .btn-link:focus, .btn-link.focus {
-  text-decoration: underline;
   border-color: transparent;
   box-shadow: none;
 }

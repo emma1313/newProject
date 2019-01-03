@@ -129,55 +129,116 @@ function hideShowConfirm() {
     }
 }
 
-// //member-select-game
-// function memberBtn() {
-//     var memberB = document.getElementById("showSelect");
-//     memberB.classList.toggle("d-none");
-// }
-// function memberSelect() {
-//     var memberS = document.getElementById("memberSelectForIcon");
-//     memberS.classList.toggle("member-option_icon");
-// }
-// function memberSelect2() {
-//     var memberS2 = document.getElementById("memberSelectForIcon2");
-//     memberS2.classList.toggle("member-option_icon");
-// }
-// function memberSelect3() {
-//     var memberS3 = document.getElementById("memberSelectForIcon3");
-//     memberS3.classList.toggle("member-option_icon");
-// }
-// function memberSelect4() {
-//     var memberS4 = document.getElementById("memberSelectForIcon4");
-//     memberS4.classList.toggle("member-option_icon");
+//member-old
+function hideShowMemberOld() {
 
-// }
-// function memberSelect5() {
-//     var memberS5 = document.getElementById("memberSelectForIcon5");
-//     memberS5.classList.toggle("member-option_icon");
-// }
-// //member-select-wallet
-// function memberBtn2() {
-//     var memberB = document.getElementById("showSelect2");
-//     memberB.classList.toggle("d-none");
-// }
-// function memberSelect12() {
-//     var memberS = document.getElementById("memberSelectForIcon12");
-//     memberS.classList.toggle("member-option_icon");
-// }
-// function memberSelect22() {
-//     var memberS2 = document.getElementById("memberSelectForIcon22");
-//     memberS2.classList.toggle("member-option_icon");
-// }
-// function memberSelect32() {
-//     var memberS3 = document.getElementById("memberSelectForIcon32");
-//     memberS3.classList.toggle("member-option_icon");
-// }
-// function memberSelect42() {
-//     var memberS4 = document.getElementById("memberSelectForIcon42");
-//     memberS4.classList.toggle("member-option_icon");
+    var input= document.getElementById("input-member_old");
+    var i = document.getElementById("i-member_old");
 
-// }
-// function memberSelect52() {
-//     var memberS5 = document.getElementById("memberSelectForIcon52");
-//     memberS5.classList.toggle("member-option_icon");
-// }
+    if (input.type == "password") {
+            input.type = "text";
+            i.classList.add("fa-eye");
+            i.classList.remove("fa-eye-slash");
+    }else {
+            input.type = "password";
+            i.classList.add("fa-eye-slash");
+            i.classList.remove("fa-eye");
+    }
+}
+
+//member-new
+function hideShowMemberNew() {
+
+    var input= document.getElementById("input-member_new");
+    var i = document.getElementById("i-member_new");
+
+    if (input.type == "password") {
+            input.type = "text";
+            i.classList.add("fa-eye");
+            i.classList.remove("fa-eye-slash");
+    }else {
+            input.type = "password";
+            i.classList.add("fa-eye-slash");
+            i.classList.remove("fa-eye");
+    }
+}
+
+//member-new-confirm
+function hideShowMemberNewConfirm() {
+
+    var input= document.getElementById("input-member_newConfirm");
+    var i = document.getElementById("i-member_newConfirm");
+
+    if (input.type == "password") {
+            input.type = "text";
+            i.classList.add("fa-eye");
+            i.classList.remove("fa-eye-slash");
+    }else {
+            input.type = "password";
+            i.classList.add("fa-eye-slash");
+            i.classList.remove("fa-eye");
+    }
+}
+
+//member-switch
+if (document.querySelector(".toggle")) {
+    document.querySelector(".toggle").onclick = function(){
+    
+        //切換 toggle on
+        let toggleOf = document.querySelector(".toggle");
+        toggleOf.classList.toggle("toggle-on");
+    };
+}
+
+//member-select-game
+function memberBtn() {
+    var memberB = document.getElementById("showSelect");
+    memberB.classList.toggle("d-none");
+}
+function memberSelect() {
+    var memberS = document.getElementById("memberSelectForIcon");
+    memberS.classList.toggle("member-option_icon");
+}
+function memberSelect2() {
+    var memberS2 = document.getElementById("memberSelectForIcon2");
+    memberS2.classList.toggle("member-option_icon");
+}
+function memberSelect3() {
+    var memberS3 = document.getElementById("memberSelectForIcon3");
+    memberS3.classList.toggle("member-option_icon");
+}
+function memberSelect4() {
+    var memberS4 = document.getElementById("memberSelectForIcon4");
+    memberS4.classList.toggle("member-option_icon");
+}
+function memberSelect5() {
+    var memberS5 = document.getElementById("memberSelectForIcon5");
+    memberS5.classList.toggle("member-option_icon");
+}
+
+//member-select-wallet
+function memberBtn2() {
+    var memberB = document.getElementById("showSelect2");
+    memberB.classList.toggle("d-none");
+}
+function memberSelect12() {
+    var memberS = document.getElementById("memberSelectForIcon12");
+    memberS.classList.toggle("member-option_icon");
+}
+function memberSelect22() {
+    var memberS2 = document.getElementById("memberSelectForIcon22");
+    memberS2.classList.toggle("member-option_icon");
+}
+function memberSelect32() {
+    var memberS3 = document.getElementById("memberSelectForIcon32");
+    memberS3.classList.toggle("member-option_icon");
+}
+function memberSelect42() {
+    var memberS4 = document.getElementById("memberSelectForIcon42");
+    memberS4.classList.toggle("member-option_icon");
+
+}
+function memberSelect52() {
+    var memberS5 = document.getElementById("memberSelectForIcon52");
+    memberS5.classList.toggle("member-option_icon");
+}
