@@ -1,0 +1,36 @@
+//客服中心
+.row
+    .col-12.mt-5
+        h5.m-grayLight.d-flex.align-content-center
+            svg.member-title_svg.mr-2(viewbox='0 0 512 512')
+                path(d='M403.6,69.3C358.9,24.6,299.6,0,236.4,0S113.9,24.6,69.2,69.3c-86.4,86.4-92.4,224.7-14.9,318c-7.6,15.3-19.8,33.1-37.9,42\
+                c-8.7,4.3-13.6,13.6-12.1,23.2s8.9,17.1,18.5,18.6c4.5,0.7,10.9,1.4,18.7,1.4c20.9,0,51.7-4.9,83.2-27.6\
+                c35.1,18.9,73.5,28.1,111.6,28.1c61.2,0,121.8-23.7,167.4-69.3c44.7-44.7,69.3-104,69.3-167.2S448.3,114,403.6,69.3z M384.5,384.6\
+                c-67.5,67.5-172,80.9-254.2,32.6c-5.4-3.2-12.1-2.2-16.4,2.1c-0.4,0.2-0.8,0.5-1.1,0.8c-27.1,21-53.7,25.4-71.3,25.4h-0.1\
+                c20.3-14.8,33.1-36.8,40.6-53.9c1.2-2.9,1.4-5.9,0.7-8.7c-0.3-2.7-1.4-5.4-3.3-7.6C6.2,292.6,10,166.6,88.2,88.4\
+                c81.7-81.7,214.6-81.7,296.2,0C466.2,170.1,466.2,302.9,384.5,384.6z')
+                circle(cx='236.4', cy='236.5', r='16.6')
+                circle(cx='322', cy='236.5', r='16.6')
+                circle(cx='150.8', cy='236.5', r='16.6')
+            |客服中心
+        hr
+        p.text-center.m-skin 尊敬的客戶，歡迎您來到Super8在線客服，很高興能為尊貴的您進行服務。
+        .agent
+        ul#myTab.nav.nav-tabs.nav-fill.mt-3.mb-5(role='tablist')
+            li.nav-item.w-50
+                a#serviceLine-tab.nav-link.a-grayBlue.active(data-toggle='tab', href='#serviceLine', role='tab', aria-controls='serviceLine', aria-selected='true') 
+                    |系統客服
+            li.nav-item.w-50
+                a#serviceYours-tab.nav-link.a-grayBlue(data-toggle='tab', href='#serviceYours', role='tab', aria-controls='serviceYours', aria-selected='false') 
+                    |專屬代理  
+        #myTabContent.tab-content
+            //系統客服
+            #serviceLine.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='serviceLine-tab') 
+                .d-flex.justify-content-center.mt-3
+                    .border.border-lightBlue.rounded.bg-white.shadow-sm.w-60
+                        .service-line
+            //專屬代理
+            #serviceYours.tab-pane.fade(role='tabpanel', aria-labelledby='serviceYours-tab') 
+                .d-flex.justify-content-center.mt-3
+                    .border.border-lightBlue.rounded.bg-white.shadow-sm.w-60
+                        .service-yours

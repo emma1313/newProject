@@ -18,8 +18,14 @@
     //member-frame
     .row
         .col-12.mt-4
-            h4.gray.my-4
-                i.far.fa-user.fa-fw
+            h4.gray.font-weight-normal.d-flex.align-items-center.my-4
+                svg.mygame-title_svg.mr-1(viewbox='0 0 512 512')
+                    path(d='M255.2,277.8c-71.1,0-128.9-57.9-128.9-129c0-70.9,57.8-128.6,128.9-128.6c71.1,0,129,57.7,129,128.6\
+                    C384.2,219.9,326.3,277.8,255.2,277.8z M255.2,45.2c-57.3,0-103.9,46.5-103.9,103.6c0,57.3,46.6,104,103.9,104\
+                    c57.3,0,104-46.7,104-104C359.2,91.7,312.5,45.2,255.2,45.2z')
+                    path(d='M481.8,507.5H30.2c-16.4,0-29.7-13.3-29.7-29.7c0-96.9,78.8-175.7,175.7-175.7h159.6c96.9,0,175.7,78.8,175.7,175.7\
+                    C511.5,494.2,498.2,507.5,481.8,507.5z M176.2,327.1c-83.1,0-150.7,67.6-150.7,150.7c0,2.7,2,4.7,4.7,4.7h451.6c2.7,0,4.7-2,4.7-4.7\
+                    c0-83.1-67.6-150.7-150.7-150.7H176.2z')
                 |  会员中心
 
             //member-pill
@@ -483,77 +489,135 @@
                                         .row
                                             .col-10.offset-md-2.mt-3.mb-5
                                                 button.btn.btn-primary.w-auto.member-button(type='submit', value='Submit') 送出
-                                        //table
-                                        .form-group.row
-                                            .col-12.d-flex.justify-content-between.align-items-center.mt-5
-                                                h5.text-secondary.mb-0
-                                                    i.far.fa-calendar-alt.fa-fw
-                                                    | 明細時間：一週 
-                                                button.btn.btn-outline-primary.w-auto.member-button(type='submit', value='Submit') 
-                                                    i.fas.fa-redo.mr-2
-                                                    | 重新整理
-                                        .form-group.row
-                                            .col-12
-                                                table.table.table-hover
-                                                    thead.thead-dark.border.border-secondary
-                                                        tr
-                                                            th(scope='col') 申請時間
-                                                            th(scope='col') 交易單號
-                                                            th(scope='col') 存款方式
-                                                            th(scope='col') 點數
-                                                            th(scope='col') 狀態
-                                                            th(scope='col') 說明
-                                                    tbody.border.border-secondary
-                                                        tr
-                                                            td 2018-11-04 16:34:06
-                                                            td ssb2r
-                                                            td 虛擬帳號ATM
-                                                            td 2,000
-                                                            td.text-success  成功
-                                                            td 说明
-                                                        tr
-                                                            td 2018-11-07 16:34:06
-                                                            td jo56evmk
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-danger 失败
-                                                            td 说明
-                                                        tr
-                                                            td 2018-11-08 16:34:06
-                                                            td jo56evmkdfsdfs
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-secondary 取消
-                                                            td 说明
-                                                        tr
-                                                            td 2018-11-09 16:34:06
-                                                            td fsdfs
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-info 等待储值 台湾银行(004)帐号：123456789101
-                                                            td 说明
-                                                        tr
-                                                            td 2018-11-09 16:34:06
-                                                            td fsdfs
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-info 存款審核中
-                                                            td 说明
-                                        //pagination
-                                        nav.my-5(aria-label='Page navigation example')
-                                            ul.pagination.justify-content-center
-                                                li.page-item.disabled.mx-1
-                                                    a.page-link.px-5.w-100(href='#', tabindex="-1")
-                                                        span &lt;
-                                                li.page-item.active.mx-1
-                                                    a.page-link(href='#') 1
-                                                li.page-item.mx-1
-                                                    a.page-link(href='#') 2
-                                                li.page-item.mx-1
-                                                    a.page-link(href='#') 3
-                                                li.page-item.mx-1
-                                                    a.page-link.px-5.w-100(href='#')
-                                                        span &gt;
+                                    //table
+                                    .form-group.row
+                                        .col-12.d-flex.justify-content-between.align-items-center.mt-5
+                                            h5.text-secondary.mb-0
+                                                i.far.fa-calendar-alt.fa-fw
+                                                | 明細時間：一週 
+                                            button.btn.btn-outline-primary.w-auto.member-button(type='submit', value='Submit') 
+                                                i.fas.fa-redo.mr-2
+                                                | 重新整理
+                                    .form-group.row
+                                        .col-12
+                                            table.table.table-hover
+                                                thead.thead-dark.border.border-secondary
+                                                    tr
+                                                        th(scope='col') 申請時間
+                                                        th(scope='col') 交易單號
+                                                        th(scope='col') 存款方式
+                                                        th(scope='col') 點數
+                                                        th.w-20(scope='col') 狀態
+                                                        th(scope='col') 手續費
+                                                        th(scope='col') 說明
+                                                tbody.border.border-secondary
+                                                    tr
+                                                        td 2018-11-03 10:34:06
+                                                        td valentinesday
+                                                        td 超商代码
+                                                        td 2,000
+                                                        td.text-info 请至超商利用代码缴费 cvs: LLL19045015177
+                                                            //barcode modal
+                                                            button.btn.btn-info.w-100( data-toggle='modal', data-target='#barCodeModalCenter')
+                                                                i.fas.fa-barcode.mr-2
+                                                                | 超商條碼
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                    tr
+                                                        td 2018-11-04 16:34:06
+                                                        td ssb2r
+                                                        td 虛擬帳號ATM
+                                                        td 2,000
+                                                        td.text-success  成功
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-07 16:34:06
+                                                        td jo56evmk
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-danger 失败
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-08 16:34:06
+                                                        td jo56evmkdfsdfs
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-secondary 取消
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-09 16:34:06
+                                                        td fsdfs
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-info 等待储值 台湾银行(004)帐号：123456789101
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-09 16:34:06
+                                                        td fsdfs
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-info 存款審核中
+                                                        td 50
+                                                        td 说明
+                                    // Modal barCode
+                                    .modal.fade#barCodeModalCenter(tabindex='-1', role='dialog', aria-labelledby='barcodeModalCenterTitle', aria-hidden='true')
+                                        .modal-dialog.modal-dialog-centered(role='document')
+                                            .modal-content
+                                                .modal-header.align-items-center
+                                                    h5#barcodeModalLongTitle.modal-title 超商條碼
+                                                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                                                        i.fas.fa-times(aria-hidden='true')
+                                                .modal-body
+                                                    ul#myTab.nav.nav-tabs(role='tablist')
+                                                        li.nav-item.w-50
+                                                            a#FAMIPORT-tab.nav-link.c-blue.text-center.active(data-toggle='tab', href='#FAMIPORT2', role='tab', aria-controls='FAMIPORT', aria-selected='false') 全家－FAMIPORT
+                                                        li.nav-item.w-50
+                                                            a#LIFE-tab.nav-link.c-blue.text-center(data-toggle='tab', href='#LIFE2', role='tab', aria-controls='LIFE', aria-selected='false') 萊爾富－LIFE-ET
+                                                    #myTabContent.tab-content
+                                                        #FAMIPORT2.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='profile-tab')
+                                                            .row
+                                                                .col-12
+                                                                    .d-flex.justify-content-center
+                                                                        h4.my-4
+                                                                            img.store-logo.mr-2(src="images/store/store_FamilyMart.png", alt="")
+                                                                            |全家超商代碼三段式繳費條碼
+                                                                    .border.bg-white.text-center.my-3.p-4
+                                                                        img.mb-3(src="images/store/barCode.png", alt="")
+                                                                        img.mb-3(src="images/store/barCode.png", alt="")
+                                                                        img(src="images/store/barCode.png", alt="")
+                                                        #LIFE2.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab')
+                                                            .row
+                                                                .col-12
+                                                                    .d-flex.justify-content-center
+                                                                        h4.my-4
+                                                                            img.store-logo.mr-2(src="images/store/store_HiLife.png", alt="")
+                                                                            |萊爾富Life-ET 代碼繳費流程
+                                                                    .border.bg-white.text-center.my-3.p-4
+                                                                        img.mb-3(src="images/store/barCode.png", alt="")
+                                                                        img.mb-3(src="images/store/barCode.png", alt="")
+                                                                        img(src="images/store/barCode.png", alt="")
+                                                .modal-footer
+                                                    button.btn.btn-secondary(type='button', data-dismiss='modal') 關閉
+                                    //pagination
+                                    nav.my-5(aria-label='Page navigation example')
+                                        ul.pagination.justify-content-center
+                                            li.page-item.disabled.mx-1
+                                                a.page-link.px-5.w-100(href='#', tabindex="-1")
+                                                    span &lt;
+                                            li.page-item.active.mx-1
+                                                a.page-link(href='#') 1
+                                            li.page-item.mx-1
+                                                a.page-link(href='#') 2
+                                            li.page-item.mx-1
+                                                a.page-link(href='#') 3
+                                            li.page-item.mx-1
+                                                a.page-link.px-5.w-100(href='#')
+                                                    span &gt;
 
                 //提款
                 .tab-pane.fade.show#pills-withdraw  

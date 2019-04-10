@@ -7333,6 +7333,10 @@ button.bg-dark:focus {
   box-shadow: none !important;
 }
 
+.w-20 {
+  width: 20% !important;
+}
+
 .w-25 {
   width: 25% !important;
 }

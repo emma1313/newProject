@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-    <div class="container-fluid fixed-top d-flex align-items-center bg-dark nav-height">
-      <div class="container nav-bg">
+    <div class="container-fluid fixed-top bg-dark nav-height">
+      <div class="nav-bg">
         <div class="row">
           <!--login-->
           <div class="col-3"><a class="nav-login" href="#">
@@ -106,7 +106,7 @@
                   <div class="form-row mx-3">
                     <div class="col-12 mb-4">
                       <input class="form-control pl-45 py-2" type="text" placeholder="請輸入通訊軟體帳號" required>
-                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                      <div class="login-icon_account"><i class="fab fa-line text-secondary"></i></div>
                       <div class="font-14 text-danger mt-1"><i class="fas fa-exclamation-triangle mr-2"></i>註冊後即無法更改</div>
                     </div>
                   </div>
@@ -114,7 +114,7 @@
                   <div class="form-row mx-3">
                     <div class="col-12 mb-4">
                       <input class="form-control pl-45 py-2" type="text" placeholder="請輸入手机号码" required>
-                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                      <div class="login-icon_account"><i class="fas fa-mobile-alt text-secondary"></i></div>
                       <div class="font-14 text-danger mt-1"><i class="fas fa-exclamation-triangle mr-2"></i>註冊後即無法更改</div>
                       <button class="btn btn-outline-primary w-auto my-3 px-4" type="button">發送簡訊驗證碼</button>
                     </div>
@@ -123,7 +123,7 @@
                   <div class="form-row mx-3">
                     <div class="col-12 mb-4">
                       <input class="form-control pl-45 py-2" type="text" placeholder="請輸入簡訊驗證碼" required>
-                      <div class="login-icon_account"><i class="fas fa-user text-secondary"></i></div>
+                      <div class="login-icon_account"><i class="fas fa-envelope text-secondary"></i></div>
                     </div>
                   </div>
                   <!--同意服务条款-->
@@ -138,9 +138,9 @@
                   </div>
                   <!--btn -->
                   <div class="form-row mx-3">
-                    <div class="col-12 mb-5">
-                      <button class="btn btn-primary px-5 mr-2" type="submit" value="Submit" data-toggle="modal" data-target="#registeredModalCenter">註冊</button>
-                      <button class="btn btn-outline-secondary px-5" type="reset" value="Reset">重填</button>
+                    <div class="col-12 mb-5 col-12 mt-4 mb-5 d-flex align-items-center justify-content-around">
+                      <button class="btn btn-primary w-45" type="submit" value="Submit" data-toggle="modal" data-target="#registeredModalCenter">註冊</button>
+                      <button class="btn btn-outline-secondary w-45" type="reset" value="Reset">重填</button>
                     </div>
                   </div>
                 </form>
@@ -172,10 +172,24 @@
         </div>
       </div>
     </div>
+    <div>
+      <div class="container-fluid nav-member mt-48">
+        <div class="row">
+          <div class="col-12 text-white px-3">
+            <h6 class="d-flex align-items-center justify-content-end my-3 mb-0">
+              <svg class="member-info_svg mr-2" viewbox="0 0 512 512">
+                <path d="M275.1,242.9h-38c-15.8,0-28.7-12.9-28.7-28.7s12.9-28.7,28.7-28.7h67.1c7.2,0,13.1-5.9,13.1-13.1c0-7.2-5.9-13.1-13.1-13.1                    h-35v-26.7c0-7.2-5.9-13.1-13.1-13.1s-13.1,5.9-13.1,13.1v26.7h-6c-30.2,0-54.8,24.6-54.8,54.8s24.6,54.8,54.8,54.8h38                    c15.8,0,28.7,12.9,28.7,28.7s-12.9,28.7-28.7,28.7h-68.3c-7.2,0-13.1,5.9-13.1,13.1s5.9,13.1,13.1,13.1h36.2v27.2                    c0,7.2,5.9,13.1,13.1,13.1s13.1-5.9,13.1-13.1v-27.2h6.3c0.1,0,0.2,0,0.3,0c29.8-0.4,54-24.8,54-54.8                    C329.7,267.4,305.2,242.9,275.1,242.9z"></path>
+                <path d="M437.1,74.9C388.7,26.6,324.4,0,256,0S123.3,26.6,74.9,74.9S0,187.6,0,256s26.6,132.7,74.9,181.1S187.6,512,256,512                    s132.7-26.6,181.1-74.9S512,324.4,512,256S485.4,123.3,437.1,74.9z M256,485.9C129.3,485.9,26.1,382.7,26.1,256S129.3,26.1,256,26.1                    S485.9,129.3,485.9,256S382.7,485.9,256,485.9z"></path>
+              </svg>12,345,678.99<i class="fas fa-redo link-lightWhite pl-3"></i>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container"><a class="go-top" href="#" onclick="topFunction()"><i class="fas fa-angle-up fa-lg d-flex justify-content-center align-items-center"></i></a>
       <div class="row">
-        <div class="col-12 mt-48 px-4">
-          <h5 class="m-grayLight mt-5"><i class="fas fa-globe-asia mr-1"></i>選擇您的語系</h5>
+        <div class="col-12 mt-5">
+          <h5 class="m-grayLight"><i class="fas fa-globe-asia mr-1"></i>選擇您的語系</h5>
           <hr>
           <div class="language-c mb-3 link-lightGray">简体</div>
           <div class="language-h mb-3 link-lightGray">繁體</div>

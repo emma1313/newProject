@@ -1,5 +1,5 @@
-.container-fluid.fixed-top.d-flex.align-items-center.bg-dark.nav-height
-    .container.nav-bg
+.container-fluid.fixed-top.bg-dark.nav-height
+    .nav-bg
         .row
             //login
             .col-3
@@ -93,7 +93,7 @@
                                 .col-12.mb-4
                                     input.form-control.pl-45.py-2(type='text', placeholder='請輸入通訊軟體帳號' required)
                                     .login-icon_account
-                                        i.fas.fa-user.text-secondary
+                                        i.fab.fa-line.text-secondary
                                     .font-14.text-danger.mt-1
                                         i.fas.fa-exclamation-triangle.mr-2
                                         |註冊後即無法更改
@@ -102,7 +102,7 @@
                                 .col-12.mb-4
                                     input.form-control.pl-45.py-2(type='text', placeholder='請輸入手机号码' required)
                                     .login-icon_account
-                                        i.fas.fa-user.text-secondary
+                                        i.fas.fa-mobile-alt.text-secondary
                                     .font-14.text-danger.mt-1
                                         i.fas.fa-exclamation-triangle.mr-2
                                         |註冊後即無法更改
@@ -112,7 +112,7 @@
                                 .col-12.mb-4
                                     input.form-control.pl-45.py-2(type='text', placeholder='請輸入簡訊驗證碼' required)
                                     .login-icon_account
-                                        i.fas.fa-user.text-secondary
+                                        i.fas.fa-envelope.text-secondary
                             //同意服务条款
                             .form-row.mx-3
                                 .col-12.mb-5
@@ -123,9 +123,9 @@
                                             a.c-blue(href="terms.html",  target="_blank") 服务条款
                             //btn 
                             .form-row.mx-3
-                                .col-12.mb-5
-                                    button.btn.btn-primary.px-5.mr-2(type='submit', value='Submit', data-toggle='modal', data-target='#registeredModalCenter') 註冊
-                                    button.btn.btn-outline-secondary.px-5(type='reset', value='Reset') 重填
+                                .col-12.mb-5.col-12.mt-4.mb-5.d-flex.align-items-center.justify-content-around
+                                    button.btn.btn-primary.w-45(type='submit', value='Submit', data-toggle='modal', data-target='#registeredModalCenter') 註冊
+                                    button.btn.btn-outline-secondary.w-45(type='reset', value='Reset') 重填
 
 // 忘記密碼 Modal
 .modal.fade#forgetModalCenter(tabindex='-1', role='dialog', aria-labelledby='forgetModalCenterTitle', aria-hidden='true')

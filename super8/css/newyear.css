@@ -1,0 +1,491 @@
+.header-animate {
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.footer-animate {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.animate-flower {
+	position: absolute;
+	background: url(../images/newyear/flower.png) no-repeat;
+	background-size: contain;
+}
+.animate-goldIngot {
+	position: absolute;
+	background: url(../images/newyear/goldIngot.png) no-repeat;
+	background-size: contain;	
+}
+.animate-pig {
+	position: absolute;
+	background: url(../images/newyear/pig.png) no-repeat;
+	background-size: contain;
+}
+.animate-pinkPig {
+	position: absolute;
+	background: url(../images/newyear/pinkPig.png) no-repeat;
+	background-size: contain;	
+}
+.animate-congratulate {
+	position: absolute;
+	background: url(../images/newyear/congratulate.png) no-repeat;
+	background-size: contain;	
+}
+.animate-dartsFlower {
+	position: absolute;
+	background: url(../images/newyear/dartsFlower.png) no-repeat;
+	background-size: contain;	
+}
+.animate-lantern {
+	position: absolute;
+	background: url(../images/newyear/lantern.png) no-repeat;
+	background-size: contain;	
+}
+.animate-shineCircle {
+	position: absolute;
+	background: url(../images/newyear/shineCircle.png) no-repeat;
+	background-size: contain;	
+}
+.animate-girl2 {
+	position: absolute;
+	background: url(../images/newyear/girl2.png) no-repeat;
+	background-size: contain;	
+}
+.animate-girl {
+	position: absolute;
+	background: url(../images/newyear/girl.png) no-repeat;
+	background-size: contain;	
+}
+.animate-goldCircle {
+	position: absolute;
+	background: url(../images/newyear/goldCircle.png) no-repeat;
+	background-size: contain;	
+}
+.animate-littlePig {
+	position: absolute;
+	background: url(../images/newyear/littlePig.png) no-repeat;
+	background-size: contain;	
+}
+/*******************************top left object*/
+.l-animate_flower {
+	width: 130px;
+	height: 130px;
+	background-position: -13px -18px;
+	animation: flower 4.5s ease-in-out infinite;
+}
+.l-animate_flower2 {
+	width: 70px;
+	height: 70px;
+    background-position: 0 -13px;
+    left: 95px;
+	top: 0;
+	animation: flower 4s ease-in-out infinite;
+}
+.l-animate_flower3 {
+	width: 95px;
+    height: 95px;
+    left: 210px;
+    top: 0px;
+	background-position: 0px -29px;
+	animation: flower 3s ease-in-out infinite;
+}
+@keyframes flower {
+	0% {
+		filter: brightness(95%);
+	}
+	50% {
+		filter: brightness(160%);
+	}
+	100% {
+		filter: brightness(95%);
+	}
+}
+.l-animate_flowerMini {
+	width: 25px;
+	height: 25px;
+	left: 30px;
+	top: 200px;
+	transform: rotate(45deg);
+	animation: flowerMini 5s ease-in-out infinite;
+}
+.l-animate_flowerMini2 {
+	width: 35px;
+	height: 35px;
+	left: 210px;
+	top: 100px;
+	transform: rotate(45deg);
+	animation: flowerMini 4s ease-in-out infinite;
+}
+@keyframes flowerMini {
+	0% {
+		transform: scale(0.7,0.7);
+	}
+	30% {
+		transform: rotate(5deg);
+	}
+	70% {
+		transform: rotate(45deg);
+	}
+	80% {
+		filter: brightness(150%);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.7,0.7);
+	}
+}
+.l-animate_goldIngot {
+	width: 85px;
+    height: 60px;
+    left: 6px;
+	top: 247px;
+}
+.l-animate_goldIngot:hover {
+	animation: goldIngot 1s cubic-bezier(0, 0.01, 0.39, 1) 1;
+}
+@keyframes goldIngot {
+	0% {
+		top: 250px;
+		transform: scale(1,1);
+	}
+	14% {
+		top: 250px;
+		transform: scale(1,1.5);
+	}
+	28% {
+		top: 250px;
+		transform: scale(1,1);
+	}
+	42% {
+		top: 250px;
+		transform: scale(1,1.6);
+	}
+	56% {
+		top: 250px;
+		transform: scale(0.7,0.7);
+	}
+	70% {
+		top: 230px;
+		transform: rotate(25deg);
+	}
+	75% {
+		top: 250px;
+		transform: rotate(-25deg);
+	}
+	84% {
+		transform: rotate(25deg);
+	}
+	90% {
+		transform: rotate(-25deg);
+	}
+	100% {
+		transform: rotate(9deg);
+	}
+}
+.l-animate_goldIngot2 {
+	width: 53px;
+    height: 53px;
+    left: 55px;
+	top: 285px;
+	transform:rotate(9deg);
+}
+.l-animate_goldIngot2:hover {
+	animation: goldIngot2 1s cubic-bezier(1, 0.3, 0.7, 1) 1;
+}
+@keyframes goldIngot2 {
+	0% {
+		top: 280px;
+		transform:rotate(30deg);
+	}
+	30% {
+		transform:rotate(-10deg);
+	}
+	60% {
+		transform:rotate(15deg);
+	}
+	80% {
+		transform:rotate(10deg);
+	}
+	100% {
+		transform: rotate(9deg);
+	}
+}
+.l-animate_pig {
+	width: 175px;
+    height: 200px;
+    left: 95px;
+	top: 140px;
+	animation: pig 2.5s infinite;
+}
+@keyframes pig {
+	0% {
+		background: url(../images/newyear/pig.png) no-repeat;
+		background-size: contain;
+	}
+	20% {
+		background: url(../images/newyear/pig3.png) no-repeat;
+		background-size: contain;
+	}
+	50% {
+		background: url(../images/newyear/pig2.png) no-repeat;
+		background-size: contain;
+	}
+	100% {
+		background: url(../images/newyear/pig3.png) no-repeat;
+		background-size: contain;
+	}
+}
+/*******************************top right object*/
+.r-animate_pinkPig {
+	width: 60px;
+    height: 70px;
+    right: 83px;
+	top: 139px;
+	animation: pinkPig 3s infinite;	
+}
+@keyframes pinkPig {
+	0% {
+		transform: rotate(-10deg);
+	}
+	25% {
+		transform: rotate(10deg);
+		background: url(../images/newyear/pinkPig2.png) no-repeat;
+		background-size: contain;	
+	}
+	50% {
+		transform: rotate(-10deg);
+		background: url(../images/newyear/pinkPig2.png) no-repeat;
+		background-size: contain;	
+	}
+	75% {
+		transform: rotate(10deg);
+		background: url(../images/newyear/pinkPig2.png) no-repeat;
+		background-size: contain;	
+	}
+	100% {
+		transform: rotate(-10deg);
+	}
+}
+.r-animate_congratulate {
+	width: 180px;
+	height: 290px;
+	right: 0;
+	top: 11px;
+	background-position: 6px 0;
+}
+.r-animate_flower {
+	width: 135px;
+    height: 135px;
+    right: 0;
+    top: 0;
+	background-position: 8px -20px;
+	animation: flower 3s ease-in-out infinite;
+}
+.r-animate_flower2 {
+	width: 95px;
+    height: 95px;
+    right: 0;
+    top: 85px;	
+	animation: flower 3.5s 1;
+	background-position: 15px 0;
+	animation: flower 3.5s ease-in-out infinite;
+}
+.r-animate_lantern {
+	width: 95px;
+	height: 220px;
+	right: 153px;
+	top: 15px;
+	animation: lantern 3s ease-in-out infinite;
+}
+@keyframes lantern {
+	0% {
+		background: url(../images/newyear/lantern.png) no-repeat;
+		background-size: contain;	
+	}
+	50% {
+		transform: rotate(5deg);
+		background: url(../images/newyear/lantern2.png) no-repeat;
+		background-size: contain;	
+	}
+	100% {
+		background: url(../images/newyear/lantern.png) no-repeat;
+		background-size: contain;	
+	}
+}
+.r-animate_dartsFlower {
+	width: 125px;
+    height: 125px;
+    right: 96px;
+    top: 0;
+	background-position: 0 -35px;
+	animation: flower 4s 1;	
+}
+/*******************************bottom left object*/
+.l-animate_shineCircle {
+    width: 120px;
+    height: 120px;
+    bottom: 125px;
+	left: -10px;
+	animation: shineCircle 6s infinite;
+}
+@keyframes shineCircle {
+	0%{
+		transform: rotate(120deg);
+	}
+	50%{
+		transform: rotate(240deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.l-animate_flower4 {
+	width: 70px;
+    height: 70px;
+    bottom: 45px;
+    background-position: -15px;
+}
+.l-animate_flower5 {
+	width: 40px;
+    height: 40px;
+    left: 20px;
+	bottom: 20px;
+	animation: flower 3s ease-in-out infinite;
+}
+.l-animate_flower6 {
+	width: 55px;
+	height: 55px;
+	left: 165px;
+	bottom: -12px;
+	animation: flower 2.5s ease-in-out infinite;
+}
+.l-animate_girl2 {
+	width: 170px;
+    height: 300px;
+    left: 28px;
+	bottom: -12px;
+	animation: girl2 2.5s infinite;
+}
+@keyframes girl2 {
+	0% {
+		background: url(../images/newyear/girl2.png) no-repeat;
+		background-size: contain;
+	}
+	30% {
+		background: url(../images/newyear/girl2.png) no-repeat;
+		background-size: contain;
+	}
+	50% {
+		background: url(../images/newyear/girl2-2.png) no-repeat;
+		background-size: contain;
+	}
+	70% {
+		background: url(../images/newyear/girl2-2.png) no-repeat;
+		background-size: contain;
+	}
+	100% {
+		background: url(../images/newyear/girl2.png) no-repeat;
+		background-size: contain;
+	}
+}
+/*******************************bottom right object*/
+.r-animate_shineCircle2 {
+	width: 120px;
+	height: 120px;
+	bottom: 125px;
+	right: -42px;
+	animation: shineCircle 5s infinite;
+}
+.r-animate_goldCircle {
+	width: 335px;
+	height: 170px;
+	bottom: 0;
+	right: -50px;
+}
+.r-animate_dartsFlower2 {
+	width: 100px;
+	height: 100px;
+	bottom: 2px;
+	right: -30px;
+	
+}
+.r-animate_girl {
+	width: 190px;
+	height: 290px;
+	bottom: 0;
+	right: 10px;
+	animation: girl 2.5s infinite 5s;
+}
+@keyframes girl {
+	0% {
+		background: url(../images/newyear/girl.png) no-repeat;
+		background-size: contain;
+	}
+	10% {
+		background: url(../images/newyear/girl.png) no-repeat;
+		background-size: contain;
+	}
+	30% {
+		background: url(../images/newyear/girl.png) no-repeat;
+		background-size: contain;
+	}
+	50% {
+		background: url(../images/newyear/girl-2.png) no-repeat;
+		background-size: contain;
+	}
+	100% {
+		background: url(../images/newyear/girl-2.png) no-repeat;
+		background-size: contain;
+	}
+}
+.r-animate_littlePig {
+	width: 50px;
+	height: 100px;
+	bottom: 133px;
+	right: 142px;
+	animation: littlePig 2.5s infinite;
+	opacity: 0;
+}
+@keyframes littlePig {
+	0% {
+		opacity: 1;
+		background: url(../images/newyear/littlePig.png) no-repeat;
+		background-size: contain;
+	}
+	10% {
+		bottom: 143px;
+		opacity: 1;
+		background: url(../images/newyear/littlePig.png) no-repeat;
+		background-size: contain;
+	}
+	30% {
+		bottom: 133px;
+		transform: rotate(10deg);
+		background: url(../images/newyear/littlePig.png) no-repeat;
+		background-size: contain;
+	}
+	40% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		background: url(../images/newyear/littlePig2.png) no-repeat;
+		background-size: contain;
+	}
+	100% {
+		opacity: 1;
+		background: url(../images/newyear/littlePig2.png) no-repeat;
+		background-size: contain;
+	}
+}
+@media (max-width: 991px) {
+	.header-animate,
+	.footer-animate {
+		display: none;
+	}	
+}
+

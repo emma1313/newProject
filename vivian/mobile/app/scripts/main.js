@@ -93,7 +93,6 @@ function hideShowPswLogin() {
     }
 }
 
-
 //registered-password
 function hideShowRegistered() {
 
@@ -111,7 +110,6 @@ function hideShowRegistered() {
     }
 }
 
-
 //registered-password-confirm
 function hideShowConfirm() {
 
@@ -127,6 +125,20 @@ function hideShowConfirm() {
             iConfirm.classList.add("fa-eye-slash");
             iConfirm.classList.remove("fa-eye");
     }
+}
+
+//game-live-progress
+if (document.querySelector("#enterGameBtn")) {
+    document.querySelector("#enterGameBtn").onclick = function (){
+
+        //隱藏 enter game btn
+        let enterGameBtn = document.querySelector("#enterGameBtn");
+        enterGameBtn.classList.add("d-none");
+
+        //顯示 progress bar
+        let progressBar = document.querySelector("#progressBar");
+        progressBar.classList.remove("d-none");
+    };
 }
 
 //member-old

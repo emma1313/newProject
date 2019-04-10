@@ -7,6 +7,7 @@ $m-grayLight: #666666;
 $m-light: #e0e0e0;
 $m-blue: #007bff;
 $m-blueLight: #00beff;
+$m-skin: #ce6563;
 
 //主色系
 .m-dark{ color: #272727;}
@@ -16,11 +17,10 @@ $m-blueLight: #00beff;
 .m-blue{ color: #007bff;}
 .m-blueLight{ color: #00beff;}
 .m-skin{ color: #ce6563;}
+.m-hot{ color: #e03c3e;}
 
 //輔色系
 .a-grayBlue{ color: #6c757d;}
-
-.bg-skin{ background-color: #ce6563;}
 
 //變量 高度
 $Height-1: 1px;
@@ -67,6 +67,11 @@ $brightess-light: brightness(120%);
   }
 }
 
+//背景色
+.bg-grayBlue {
+  background-color: #7d8b9e;
+}
+
 //顯示隱藏
 .show { display: block !important;}
 .hide { display: none !important;}
@@ -76,6 +81,10 @@ $brightess-light: brightness(120%);
 
 //字級
 .font-14 { font-size: 14px; }
+
+.overflow-x {
+  overflow-x: auto;
+}
 
 body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, rgba(0, 0, 0, 0.1) 100%);}
 
@@ -100,15 +109,8 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
   }
 }
 
-.nav-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 //nav login btn
-.nav-login {
+.nav-login, .nav-mygame {
   display: block;
   width: 22px;
   padding: 13px 0;
@@ -117,10 +119,6 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
     height: $height-22;
     fill: #fff;
   }
-}
-
-.nav-news {
-  @extend .nav-login;
 }
 
 .nav-login_close {
@@ -144,10 +142,10 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
 
 .nav-logo {
   display: block;
-  background: url(../images/logo.png) no-repeat center center;
-  background-size: 103px 22px;
+  background: url(../images/vip-logo.svg) no-repeat center center;
+  background-size: contain;
   height: 48px;
-  width: 103px;
+  width: 95px;
   margin: auto;
 }
 
@@ -212,6 +210,10 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
   }
 }
 
+.nav-menu_title {
+  border: 1px solid $m-gray;
+}
+
 .nav-menu_icon {
   width: 25px;
   text-align: center;
@@ -256,6 +258,7 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
 }
 
 .login-icon_account {
+
   position: absolute;
   left: 17px;
   top: 9px;
@@ -268,23 +271,103 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
     background: darken($m-light, 10%);
   }
 }
-//nav news btn
-.nav-prompt {
-  position: absolute;
-  top: 10px;
-  left: 35px;
-  z-index: 1;
-  background: #ff1865;
-  width: 6px;
-  height: 6px;
-  border-radius: 40px;
+
+//nav balance
+.nav-agent {
+  background: url(../images/nav-bg_agent.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-app {
+  background: url(../images/nav-bg_app.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-electronic {
+  background: url(../images/nav-bg_electronic.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-live {
+  background: url(../images/nav-bg_live.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-lottery {
+  background: url(../images/nav-bg_lottery.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-member {
+  background: url(../images/nav-bg_member.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-mygames {
+  background: url(../images/nav-bg_mygame.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-promotion {
+  background: url(../images/nav-bg_promotion.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
+}
+.nav-sport {
+  background: url(../images/nav-bg_sport.png) no-repeat center bottom;
+  background-size: 216%;
+  i{
+    color: #d11ee9;
+    &:hover {
+      filter: $brightess-dark;
+    }
+  }
 }
 //-------------------------nav end
 
 
 //-------------------------slider start
 .swiper-container {
-  margin-top: 48px;
   width: 100%;
   height: 140px;  
   img {
@@ -333,12 +416,49 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
 //-------------------------slider end
 
 
+//-------------------------slider start
+.marquee-box {
+  position: relative;
+  height: 36px;
+  line-height: 36px;
+}
+
+.marquee-icon {
+  fill: $m-gray;
+  width: 25px;
+  height: 25px;
+  position: absolute; 
+  text-align: center;
+  top: 20%;
+  left: 0;
+}
+
+.marquee-item {
+  width: 100%;
+  display: inline-block;
+  height: 36px;  
+  line-height: 36px;
+  left:36px;
+  padding: 0 2.5em;
+  cursor: pointer;
+  color: $m-gray;
+  &:hover {
+    color: darken($m-gray, 20%);
+  }
+}
+
+.marquee-item_tit , .marquee-item_con {
+  font-weight: 500;
+  margin-right: 0.15em;
+}
+//-------------------------slider end
+
+
 //-------------------------index main block start
 .mainBlock {
   display: block;
   width: 100%;
   text-align: center;
-  color: $m-gray;
   .mainBlock-cs {
     background: url(../images/index-cs.png) no-repeat center;
     background-size: contain;
@@ -390,26 +510,36 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
   box-shadow: 0 0 7px 0 #c7c7c7;
 }
 
+.footer-menu-frame > .row > div:first-child > .footer-menu {
+  background: #e50852;
+}
+
+.footer-menu-frame > .row > div:first-child > .footer-menu >.footer-menu_svg {
+  fill: white;
+}
+
 .footer-menu {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 50px; 
+  &:hover {
+    background: #f7e0e8;
+  }
 }
 
-.fotter-menu_svg {
+.footer-menu_svg {
   fill: $m-gray;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 }
 
-.fotter-prompt {
-  position: absolute;
-  top: 4px;
-  left: 52%;
+.footer-prompt {
+  position: relative;
+  top: -10px;
   z-index: 1;
-  background: #ff1865;
+  background: #ff5282;
   color: white;
   padding: 0 4px;
   border-radius: 40px;
@@ -438,7 +568,7 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
   background-color: #ffffff8a;
   border-radius: 99px;
   position: fixed;
-  right: 40px;
+  right: 20px;
   bottom: 70px;
   z-index: 99;
   transition: width .2s;
@@ -512,89 +642,96 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
 
 
 //-------------------------partner start
-.partner-logo {
-  width: 30%;
-  margin: auto 5px;
-}
-.partner-0 {
-  background: url(../images/logo/logo0.png) no-repeat center;
-  @extend .partner-logo;
-}
 .partner-1 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo1.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-2 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo2.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-3 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo3.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-4 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo4.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-5 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo5.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-6 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo6.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-7 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo7.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-8 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo8.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
+}
+.partner-9 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background: url(../images/logo/logo9.png) no-repeat center;
+  background-size:contain;
 }
 .partner-10 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo10.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-11 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo11.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-12 {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
   background: url(../images/logo/logo12.png) no-repeat center;
-  @extend .partner-logo;
+  background-size:contain;
 }
 .partner-13 {
-  background: url(../images/logo/logo13.png) no-repeat center;
-  @extend .partner-logo;
-}
-.partner-14 {
-  background: url(../images/logo/logo14.png) no-repeat center;
-  @extend .partner-logo;
-}
-.partner-15 {
-  background: url(../images/logo/logo15.png) no-repeat center;
-  @extend .partner-logo;
-}
-.partner-16 {
-  background: url(../images/logo/logo16.png) no-repeat center;
-  @extend .partner-logo;
-}
-.partner-17 {
-  background: url(../images/logo/logo17.png) no-repeat center;
-  @extend .partner-logo;
-}
-.partner-18 {
-  background: url(../images/logo/logo18.png) no-repeat center;
-  @extend .partner-logo;
-}
-.partner-logo {
-  background-color:$m-gray;
-  background-size: 90%;
-  border-radius: 20px;
-  border: 1px solid white;
-  width: 30%;
+  width: 100%;
   height: 40px;
+  border-radius: 20px;
+  background: url(../images/logo/logo13.png) no-repeat center;
+  background-size:contain;
 }
 //-------------------------partner end
 
@@ -607,6 +744,12 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
   height: 48px;
   line-height: 48px;
   border-bottom: 1px solid #b0b0b0;
+}
+
+.member-info_svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
 }
 
 .member-title_svg {
@@ -689,6 +832,21 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
   width: 20px;
   height: 20px;
   fill: $m-blue;
+}
+.member-transfer_svgFill {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.member-close {
+  position: absolute;
+  right: 5px;
+  top: -13px;
+}
+.store-logo {
+  width: 30px;
+  height: 30px;
 }
 
 //switch
@@ -780,3 +938,297 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
 //-------------------------modal end
 
 
+//-------------------------promotion start
+.promotion-img img {
+  width: 100%;
+}
+//-------------------------promotion end
+
+
+//-------------------------mygame start
+.date {
+  float: right;
+  color: $m-grayLight;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.block-img {
+  width: 100%;
+  height: 160px;
+  border-radius: 99px; 
+  &.block-img_auto {
+    background: url(../images/block-comingsoon.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_live1 {
+    background: url(../images/block-live1.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_live2 {
+    background: url(../images/block-live2.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_live3 {
+    background: url(../images/block-live3.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_sport1 {
+    background: url(../images/block-sport1.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_sport2 {
+    background: url(../images/block-sport2.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_sport3 {
+    background: url(../images/block-sport3.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_sport4 {
+    background: url(../images/block-sport4.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_lottery1 {
+    background: url(../images/block-lottery1.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_lottery2 {
+    background: url(../images/block-lottery2.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_lottery3 {
+    background: url(../images/block-lottery3.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_lottery4 {
+    background: url(../images/block-lottery4.png) no-repeat center;
+    background-size: cover;
+  }
+  &.block-img_ele2 {
+    background: url(../images/block-ele2.png) no-repeat center;
+    background-size: contain;
+  }
+  &.block-img_ele3 {
+    background: url(../images/block-ele3.png) no-repeat center;
+    background-size: contain;
+  }
+  img {
+    width: 70%;
+  }
+  &:hover {
+    filter: brightness(120%);
+    img {
+      @extend .jello;
+      @extend .animated;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .block-img {
+    height: 130px;
+    width: 130px;
+  }
+}
+
+@media (min-width: 375px) {
+  .block-img {
+    height: 155px;
+    width: 155px;
+  }
+}
+
+@media (min-width: 768px) {
+  .block-img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.game-favorite {
+  width: 20px;
+  height: 20px; 
+  vertical-align: bottom;
+}
+
+.game-favorite > input[type=checkbox], .svg-starfill { display: none;}
+.game-favorite > input[type=checkbox]:checked ~ .svg-star     { display: none;}
+.game-favorite > input[type=checkbox]:checked ~ .svg-starfill { display: block;}
+
+.game-favorite_frame {
+  position: absolute;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  left: 8px;
+  padding-top: 6px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  fill: #fff;
+  background: #e03c3e;
+  &:hover {
+    background: lighten(#e03c3e,10%);
+  }
+}
+
+//-------------------------mygame end
+
+
+//-------------------------game page start
+.classification-svg {
+  width: 17px;
+  height: 17px;
+  left: 8px;
+  fill: $m-skin;
+}
+
+.classification-svg_h5 {
+  width: 22px;
+  height: 22px;
+  fill: $m-skin;
+}
+
+
+.logo-1 {
+  background: url(../images/logo/logo1.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+
+.logo-2 {
+  background: url(../images/logo/logo2.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+
+.logo-3 {
+  background: url(../images/logo/logo3.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+
+.logo-4 {
+  background: url(../images/logo/logo4.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+
+.logo-5 {
+  background: url(../images/logo/logo5.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-6 {
+  background: url(../images/logo/logo6.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-7 {
+  background: url(../images/logo/logo7.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-8 {
+  background: url(../images/logo/logo8.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-9 {
+  background: url(../images/logo/logo9.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-10 {
+  background: url(../images/logo/logo10.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-11 {
+  background: url(../images/logo/logo11.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-12 {
+  background: url(../images/logo/logo12.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+.logo-13 {
+  background: url(../images/logo/logo13.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+
+.filter-hotgame {
+  background: url(../images/hotgames.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+
+.filter-allgame {
+  background: url(../images/allgames.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 40px;
+}
+
+.h-55 {
+  height: 55px;
+}
+
+.border-lightBlue {
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+//-------------------------game page end
+
+
+//-------------------------service start
+.agent {
+  background: url(../images/agent.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 200px;
+}
+
+.service-line {
+  background: url(../images/service-line.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 200px;
+}
+
+.service-yours {
+  background: url(../images/service-yours.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 200px;
+}
+//-------------------------service end
+
+
+//-------------------------other start
+.modal-title_svg {
+  width: 40px;
+  height: 50px;
+  fill: $m-grayLight;
+}
+//-------------------------other end

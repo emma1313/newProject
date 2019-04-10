@@ -1,6 +1,6 @@
 .row
-    .col-12.m-gray.px-4
-        h5.d-flex.align-content-center.mt-3
+    .col-12.m-gray.mt-5
+        h5.d-flex.align-content-center
             svg.member-title_svg.mr-2(viewbox='0 0 512 512')
                 path(d='M481.2,394.4v54.5c0,36.3-29.6,33.7-65.7,33.7H96.6c-36.3,0-65.7,2.4-65.7-33.7v-54.7c0-8.1-6.5-14.7-14.7-14.7\
                 S1.5,386,1.5,394.2v54.7c0,52.5,42.7,63.1,95.1,63.1h318.8c52.5,0,95.1-10.7,95.1-63.1v-54.5c0-8.1-6.5-14.7-14.7-14.7\
@@ -27,7 +27,7 @@
                                 button.btn.link-lightBlue.collapsed.d-flex.justify-content-between.align-items-center.px-0(data-toggle='collapse', data-target='#collapseOne-deposit', aria-expanded='true')
                                     |存款管理
                                     i.fas.fa-angle-up.fa-lg
-                        #collapseOne-deposit.collapse(data-parent='#accordion')
+                        #collapseOne-deposit.collapse(aria-labelledby="headingOne-deposit" data-parent='#accordion')
                             .member-card_body
                                 form.needs-validation(novalidate)
                                     //存款方式
@@ -35,7 +35,7 @@
                                         label.col-12.col-form-label(required) 
                                             |存款方式
                                             // 存款方式 Modal
-                                            i.far.fa-question-circle.fa-lg.link-lightBlue.pl-3( data-toggle='modal', data-target='#questionModalCenter')
+                                            i.far.fa-question-circle.fa-lg.link-lightBlue.pl-3(data-toggle='modal', data-target='#questionModalCenter')
                                         .col-12
                                             select.form-control(required)
                                                 option(value="1") 超商代码
@@ -55,9 +55,9 @@
 
                                     //btn 
                                     .row
-                                        .col-12.mt-4.mb-5
-                                            button.btn.btn-primary.px-5(type='submit', value='Submit') 送出
-                                            button.btn.btn-outline-secondary.px-5(type='reset', value='Reset') 重填
+                                        .col-12.mt-4.mb-5.d-flex.align-items-center.justify-content-around
+                                            button.btn.btn-primary.w-45(type='submit', value='Submit') 送出
+                                            button.btn.btn-outline-secondary.w-45(type='reset', value='Reset') 重填
                     //存款_存款紀錄
                     .member-card
                         .member-card_header#headingTwo-deposit
@@ -65,9 +65,9 @@
                                 button.btn.link-lightBlue.collapsed.d-flex.justify-content-between.align-items-center.px-0(data-toggle='collapse', data-target='#collapseTwo-deposit', aria-expanded='true')
                                     | 存款紀錄
                                     i.fas.fa-angle-up.fa-lg
-                        #collapseTwo-deposit.collapse(data-parent='#accordion')
+                        #collapseTwo-deposit.collapse(aria-labelledby="headingTwo-deposit" data-parent='#accordion')
                             .member-card_body
-                                form.needs-validation
+                                form.needs-validation(novalidate)
                                     //存款時間
                                     .form-group.row
                                         label.col-12.col-form-label 存款時間
@@ -91,81 +91,99 @@
                                     //btn 
                                     .row
                                         .col-12.mt-4.mb-5
-                                            button.btn.btn-primary.px-5(type='submit', value='Submit') 送出
-                                    //table
-                                    .form-group.row
-                                        .col-12
-                                            h6.text-secondary.mb-4
-                                                i.far.fa-calendar-alt.fa-fw
-                                                | 明細時間：一週 
-                                            button.btn.btn-outline-primary.px-5.mb-2(type='submit', value='Submit') 
-                                                i.fas.fa-redo.mr-2
-                                                | 重新整理
-                                    .form-group.row
-                                        .col-12
-                                            .table-responsive
-                                                table.table.table-hover
-                                                    thead.thead-dark.border.border-secondary
-                                                        tr
-                                                            th(scope='col') 申請時間
-                                                            th(scope='col') 交易單號
-                                                            th(scope='col') 存款方式
-                                                            th(scope='col') 點數
-                                                            th(scope='col') 狀態
-                                                            th(scope='col') 說明
-                                                    tbody.border.border-secondary
-                                                        tr
-                                                            td(nowrap="nowrap") 2018-11-04 16:34:06
-                                                            td(nowrap="nowrap") ssb2r
-                                                            td(nowrap="nowrap") 虛擬帳號ATM
-                                                            td(nowrap="nowrap") 2,000
-                                                            td.text-success(nowrap="nowrap") 成功
-                                                            td(nowrap="nowrap") 说明
-                                                        tr
-                                                            td 2018-11-07 16:34:06
-                                                            td jo56evmk
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-danger 失败
-                                                            td 说明
-                                                        tr
-                                                            td 2018-11-08 16:34:06
-                                                            td jo56evmkdfsdfs
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-secondary 取消
-                                                            td 说明
-                                                        tr
-                                                            td 2018-11-09 16:34:06
-                                                            td fsdfs
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-info(nowrap="nowrap") 等待储值 台湾银行(004)帐号：123456789101
-                                                            td 说明
-                                                        tr
-                                                            td 2018-11-09 16:34:06
-                                                            td fsdfs
-                                                            td 銀行帳戶
-                                                            td 1,000
-                                                            td.text-info 存款審核中
-                                                            td 说明
-                                    //pagination
-                                    .row
-                                        .col-12
-                                            nav.my-5(aria-label='Page navigation example')
-                                                ul.pagination.justify-content-center
-                                                    li.page-item.disabled.mx-1
-                                                        a.page-link(href='#', tabindex="-1")
-                                                            span &lt;
-                                                    li.page-item.active.mx-1
-                                                        a.page-link(href='#') 1
-                                                    li.page-item.mx-1
-                                                        a.page-link(href='#') 2
-                                                    li.page-item.mx-1
-                                                        a.page-link(href='#') 3
-                                                    li.page-item.mx-1
-                                                        a.page-link(href='#')
-                                                            span &gt;
+                                            button.btn.btn-primary.w-100(type='submit', value='Submit')  送出
+                                //table
+                                .form-group.row
+                                    .col-12
+                                        h6.text-secondary.mb-4
+                                            i.far.fa-calendar-alt.fa-fw
+                                            | 明細時間：一週 
+                                        button.btn.btn-outline-primary.px-5.mb-2
+                                            i.fas.fa-redo.mr-2
+                                            | 重新整理
+                                .form-group.row
+                                    .col-12
+                                        .table-responsive
+                                            table.table.table-hover
+                                                thead.thead-dark.border.border-secondary
+                                                    tr
+                                                        th(scope='col') 申請時間
+                                                        th(scope='col') 交易單號
+                                                        th(scope='col') 存款方式
+                                                        th(scope='col') 點數
+                                                        th(scope='col') 狀態
+                                                        th(scope='col') 手續費
+                                                        th(scope='col') 說明
+                                                tbody.border.border-secondary
+                                                    tr
+                                                        td(nowrap="nowrap") 2018-11-04 16:34:06
+                                                        td(nowrap="nowrap") ssb2r
+                                                        td(nowrap="nowrap") 虛擬帳號ATM
+                                                        td(nowrap="nowrap") 2,000
+                                                        td.text-success(nowrap="nowrap") 成功
+                                                        td(nowrap="nowrap") 50
+                                                        td(nowrap="nowrap") 说明
+                                                    tr
+                                                        td 2018-11-07 16:34:06
+                                                        td jo56evmk
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-danger 失败
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-08 16:34:06
+                                                        td jo56evmkdfsdfs
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-secondary 取消
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-09 16:34:06
+                                                        td fsdfs
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-info 等待储值 台湾银行(004)帐号：123456789101
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-09 16:34:06
+                                                        td fsdfs
+                                                        td 銀行帳戶
+                                                        td 1,000
+                                                        td.text-info 存款審核中
+                                                        td 50
+                                                        td 说明
+                                                    tr
+                                                        td 2018-11-13 16:34:06
+                                                        td fsdfs
+                                                        td 超商代码
+                                                        td 2,000
+                                                        td.text-info 请至超商利用代码缴费 cvs: LLL19045015177
+                                                            //barcode modal
+                                                            button.btn.btn-info.w-100( data-toggle='modal', data-target='#barCodeModalCenter')
+                                                                i.fas.fa-barcode.mr-2
+                                                                | 超商條碼
+                                                        td 50
+                                                        td 说明
+                                //pagination
+                                .row
+                                    .col-12
+                                        nav.my-5(aria-label='Page navigation example')
+                                            ul.pagination.justify-content-center
+                                                li.page-item.disabled.mx-1
+                                                    a.page-link(href='#', tabindex="-1")
+                                                        span &lt;
+                                                li.page-item.active.mx-1
+                                                    a.page-link(href='#') 1
+                                                li.page-item.mx-1
+                                                    a.page-link(href='#') 2
+                                                li.page-item.mx-1
+                                                    a.page-link(href='#') 3
+                                                li.page-item.mx-1
+                                                    a.page-link(href='#')
+                                                        span &gt;
 
 // 存款方式 Modal
 .modal.fade#questionModalCenter(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
@@ -260,3 +278,46 @@
                                 img.w-100.mb-4(src="images/store/ok-go7.jpg", alt="ok_store_7")
             .modal-footer
                 button.btn.btn-secondary.px-5(type='button', data-dismiss='modal') 關閉
+// barCode Modal 
+.modal.fade#barCodeModalCenter(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+        .modal-content
+            .modal-header.align-items-center
+                h5#barcodeModalLongTitle.modal-title 超商條碼
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    i.fas.fa-times(aria-hidden='true')
+            .modal-body
+                ul#myTab.nav.nav-tabs(role='tablist')
+                    li.nav-item.w-50
+                        a#FAMIPORT-tab.nav-link.c-blue.text-center.active(data-toggle='tab', href='#FAMIPORT2', role='tab', aria-controls='FAMIPORT', aria-selected='false') 全家－
+                            br
+                            |FAMIPORT
+                    li.nav-item.w-50
+                        a#LIFE-tab.nav-link.c-blue.text-center(data-toggle='tab', href='#LIFE2', role='tab', aria-controls='LIFE', aria-selected='false') 萊爾富－
+                            br
+                            |LIFE-ET
+                #myTabContent.tab-content
+                    #FAMIPORT2.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='profile-tab')
+                        .row
+                            .col-12
+                                .d-flex.justify-content-center
+                                    h5.my-4
+                                        img.store-logo.mr-2(src="images/store/store_FamilyMart.png", alt="")
+                                        |全家超商代碼三段式繳費條碼
+                                .border.bg-white.text-center.my-3.py-4
+                                    img.w-80.mb-3(src="images/store/barCode.png", alt="")
+                                    img.w-80.mb-3(src="images/store/barCode.png", alt="")
+                                    img.w-80(src="images/store/barCode.png", alt="")
+                    #LIFE2.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab')
+                        .row
+                            .col-12
+                                .d-flex.justify-content-center
+                                    h5.my-4
+                                        img.store-logo.mr-2(src="images/store/store_HiLife.png", alt="")
+                                        |萊爾富Life-ET 代碼繳費流程
+                                .border.bg-white.text-center.my-3.py-4
+                                    img.w-80.mb-3(src="images/store/barCode.png", alt="")
+                                    img.w-80.mb-3(src="images/store/barCode.png", alt="")
+                                    img.w-80(src="images/store/barCode.png", alt="")
+            .modal-footer
+                button.btn.btn-secondary(type='button', data-dismiss='modal') 關閉

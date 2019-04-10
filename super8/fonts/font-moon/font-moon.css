@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?8xm7xx');
+  src:  url('fonts/icomoon.eot?8xm7xx#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?8xm7xx') format('truetype'),
+    url('fonts/icomoon.woff?8xm7xx') format('woff'),
+    url('fonts/icomoon.svg?8xm7xx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="iconmoon-"], [class*=" iconmoon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconmoon-hant .path1:before {
+  content: "\e941";
+  color: rgb(249, 8, 5);
+}
+.iconmoon-hant .path2:before {
+  content: "\e942";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-hant .path3:before {
+  content: "\e943";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-hant .path4:before {
+  content: "\e944";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-hant .path5:before {
+  content: "\e945";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-hant .path6:before {
+  content: "\e946";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-china .path1:before {
+  content: "\e900";
+  color: rgb(255, 22, 18);
+}
+.iconmoon-china .path2:before {
+  content: "\e92d";
+  margin-left: -1em;
+  color: rgb(254, 223, 0);
+}
+.iconmoon-china .path3:before {
+  content: "\e92e";
+  margin-left: -1em;
+  color: rgb(254, 223, 0);
+}
+.iconmoon-china .path4:before {
+  content: "\e92f";
+  margin-left: -1em;
+  color: rgb(254, 223, 0);
+}
+.iconmoon-china .path5:before {
+  content: "\e930";
+  margin-left: -1em;
+  color: rgb(254, 223, 0);
+}
+.iconmoon-china .path6:before {
+  content: "\e931";
+  margin-left: -1em;
+  color: rgb(254, 223, 0);
+}
+.iconmoon-taiwan .path1:before {
+  content: "\e932";
+  color: rgb(249, 8, 5);
+}
+.iconmoon-taiwan .path2:before {
+  content: "\e933";
+  margin-left: -1em;
+  color: rgb(4, 55, 160);
+}
+.iconmoon-taiwan .path3:before {
+  content: "\e934";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path4:before {
+  content: "\e935";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path5:before {
+  content: "\e936";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path6:before {
+  content: "\e937";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path7:before {
+  content: "\e938";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path8:before {
+  content: "\e939";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path9:before {
+  content: "\e93a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path10:before {
+  content: "\e93b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path11:before {
+  content: "\e93c";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path12:before {
+  content: "\e93d";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path13:before {
+  content: "\e93e";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path14:before {
+  content: "\e93f";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-taiwan .path15:before {
+  content: "\e940";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.iconmoon-2018:before {
+  content: "\e92b";
+}
+.iconmoon-1:before {
+  content: "\e901";
+}
+.iconmoon-2:before {
+  content: "\e902";
+}
+.iconmoon-3:before {
+  content: "\e903";
+}
+.iconmoon-4:before {
+  content: "\e904";
+}
+.iconmoon-5:before {
+  content: "\e905";
+}
+.iconmoon-6:before {
+  content: "\e906";
+}
+.iconmoon-7:before {
+  content: "\e907";
+}
+.iconmoon-8:before {
+  content: "\e908";
+}
+.iconmoon-9:before {
+  content: "\e909";
+}
+.iconmoon-10:before {
+  content: "\e90a";
+}
+.iconmoon-11:before {
+  content: "\e90b";
+}
+.iconmoon-12:before {
+  content: "\e90c";
+}
+.iconmoon-13:before {
+  content: "\e90d";
+}
+.iconmoon-14:before {
+  content: "\e90e";
+}
+.iconmoon-15:before {
+  content: "\e90f";
+}
+.iconmoon-16:before {
+  content: "\e910";
+}
+.iconmoon-17:before {
+  content: "\e911";
+}
+.iconmoon-18:before {
+  content: "\e912";
+}
+.iconmoon-19:before {
+  content: "\e913";
+}
+.iconmoon-20:before {
+  content: "\e914";
+}
+.iconmoon-21:before {
+  content: "\e915";
+}
+.iconmoon-22:before {
+  content: "\e916";
+}
+.iconmoon-23:before {
+  content: "\e917";
+}
+.iconmoon-24:before {
+  content: "\e918";
+}
+.iconmoon-25:before {
+  content: "\e919";
+}
+.iconmoon-26:before {
+  content: "\e91a";
+}
+.iconmoon-27:before {
+  content: "\e91b";
+}
+.iconmoon-28:before {
+  content: "\e91c";
+}
+.iconmoon-29:before {
+  content: "\e91d";
+}
+.iconmoon-30:before {
+  content: "\e91e";
+}
+.iconmoon-31:before {
+  content: "\e91f";
+}
+.iconmoon-apr:before {
+  content: "\e920";
+}
+.iconmoon-aug:before {
+  content: "\e921";
+}
+.iconmoon-dec:before {
+  content: "\e922";
+}
+.iconmoon-feb:before {
+  content: "\e923";
+}
+.iconmoon-jul:before {
+  content: "\e924";
+}
+.iconmoon-jun:before {
+  content: "\e925";
+}
+.iconmoon-mar:before {
+  content: "\e926";
+}
+.iconmoon-may:before {
+  content: "\e927";
+}
+.iconmoon-nov:before {
+  content: "\e928";
+}
+.iconmoon-oct:before {
+  content: "\e929";
+}
+.iconmoon-sep:before {
+  content: "\e92a";
+}
+.iconmoon-jan:before {
+  content: "\e900";
+}

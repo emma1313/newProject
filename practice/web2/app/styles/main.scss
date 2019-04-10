@@ -1,0 +1,256 @@
+body {
+  font-family: SFNSDisplay;
+  background: #f6f6f6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  background: #424242;
+}
+
+.logo {
+  width: 117px;
+  height: 117px;
+  background: url(../images/BMICLogo.png) no-repeat;
+  background-size: contain; 
+  
+}
+
+label {
+  font-size: 18px;
+  color: #FFD366;
+}
+
+input {
+  height: 40px;
+  width: 60%;
+  border: 2px solid #FFD366;
+  border-radius: 10px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 24px;
+  color: #fff;
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.result-btn {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  font-size: 24px;
+  background: #FFD366;
+  border-radius: 99px;
+  cursor: pointer;
+  &:hover {
+    background: #FFD366;
+    box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+  }
+  &:active {
+    background: #DEA821;
+  }
+}
+
+.result-show {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  border-radius: 99px;
+}
+
+.level-title {
+  margin-left: 1rem;
+  line-height: 120px;
+  font-size: 32px;
+}
+
+.level-value {
+  font-size: 32px;
+}
+
+.level-content {
+  font-family: AppleSystemUIFont;
+  font-size: 14px;
+}
+
+//change
+.level-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 22px;
+  border: 3px solid #424242;
+  border-radius: 99px;
+  cursor: pointer;
+}
+.color-one_bg {
+  background-color: #31BAF9;
+}
+.color-two_bg {
+  background-color: #86D73F;
+}
+.color-three_bg {
+  background-color: #FF982D;
+}
+.color-four_bg {
+  background-color: #FF6C03;
+}
+.color-five_bg {
+  background-color: #FF1200;
+}
+
+//change
+.color-one_bor {
+  border: 6px solid #31BAF9;
+}
+.color-two_bor {
+  border: 6px solid #86D73F;
+}
+.color-three_bor {
+  border: 6px solid #FF982D;
+}
+.color-four_bor {
+  border: 6px solid #FF6C03;
+}
+.color-five_bor {
+  border: 6px solid #FF1200;
+}
+
+//change
+.color-one {
+  color: #31BAF9;
+}
+.color-two {
+  color: #86D73F;
+}
+.color-three {
+  color: #FF982D;
+}
+.color-four {
+  color: #FF6C03;
+}
+.color-five {
+  color: #FF1200;
+}
+
+h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #424242;
+}
+
+.cal-board {
+  position: relative;
+  width: 75%;
+  height: 62px;
+  background: #fff;
+  span {
+    line-height: 62px;
+    vertical-align: top;
+  }
+}
+
+.icon-cross {
+  position: absolute;
+  z-index: 1;
+  right: -10px;
+  top: -5px;
+  width: 24px;
+  height: 24px;
+  background: #919191;
+  border-radius: 99px;
+  cursor: pointer;
+  &:hover {
+    transition: .3s;
+    background: #585858;
+  }
+  &::before, &::after {
+    position: absolute;
+    content:"";
+    right: 11px;
+    top: 4px;
+    width: 3px;
+    height: 16px;
+    background: #f6f6f6;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+//change
+.cal-one {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 62px;
+  background: #31BAF9;
+  box-shadow: 2px 0 3px 0 rgba(49,186,249,0.29);
+}
+.cal-two {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 62px;
+  background: #86D73F;
+  box-shadow: 2px 0 3px 0 rgba(134,215,63,0.29); 
+}
+.cal-three {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 62px;
+  background: #FF982D;
+  box-shadow: 2px 0 3px 0 rgba(255,152,45,0.29);
+}
+.cal-four {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 62px;
+  background: #FF6C03;
+  box-shadow: 2px 0 3px 0 rgba(255,108,3,0.29);
+}
+.cal-five {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 62px;
+  background: #FF1200;
+  box-shadow: 2px 0 3px 0 rgba(255,18,0,0.29);
+}
+
+.cal-title, .cal-bmi_set, .cal-kg_set, .cal-cm_set {
+  font-size: 20px;
+  color: #4A4A4A;
+} 
+
+.cal-bmi, .cal-kg, .cal-cm, .cal-date {
+  font-size: 12px;
+  color: #424242;
+  padding-right: 0;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  background:url(../images/BMICLogo2.png) no-repeat center center;
+  background-color: #FFD366;
+  background-size: 55px; 
+}

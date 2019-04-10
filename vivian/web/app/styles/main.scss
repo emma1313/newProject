@@ -25,7 +25,7 @@ $a-hot: #ea3718;
 
 
 //高度
-$height-44: 44px;
+$height-middle: 44px;
 
 //圓角
 .rounded-left:first-child {
@@ -118,26 +118,16 @@ body {
 
 //marquee 
 .marquee-box {
-  height: $height-44;
-  line-height: $height-44;
-  overflow: hidden;
   position: relative;
-  &:before{
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: $height-44;
-    width: 1px;
-    background: #141414;
-    box-shadow: 0px 0px 7px 5px #141414;
-  }
+  height: $height-middle;
+  line-height: $height-middle;
+  border-bottom: 1px solid $gray;
 }
 
 .marquee-icon {
-  @extend .svg-light;
-  background-color: $m-dark;
-  box-shadow: 3px 0px 15px 0px $m-dark;
+  fill: $gray;
+  width: 25px;
+  height: 25px;
   position: absolute; 
   text-align: center;
   top: 20%;
@@ -145,14 +135,16 @@ body {
 }
 
 .marquee-item {
+  width: 100%;
   display: inline-block;
-  height: $height-44;  
-  line-height: $height-44;
-  left:$height-44;
-  padding: 0 1em;
-  color: $m-light;
+  height: $height-middle;  
+  line-height: $height-middle;
+  left:$height-middle;
+  padding: 0 2.5em;
+  cursor: pointer;
+  color: $gray;
   &:hover {
-    color: lighten($m-light, 20%);
+    color: darken($gray, 20%);
   }
 }
 
@@ -178,7 +170,7 @@ body {
 .nav-img {
   width: 30px;
   height: 30px;
-  line-height: $height-44;
+  line-height: $height-middle;
 }
 
 .svg-light {
@@ -229,6 +221,9 @@ body {
   }
   &.nav-bg_mygame {
     background: url(../images/nav-bg_mygame.png) no-repeat center;
+  }
+  &.nav-bg_app {
+    background: url(../images/nav-bg_app.png) no-repeat center;
   }
 }
 
@@ -338,13 +333,12 @@ body {
 }
 .footer-index {
   position: relative;
-  background-color: #133750;
-  background: linear-gradient(to right, #0d2638 0%, #133750 50%, #0d2638 100%);
+  background-color: #647d8f;
+  background: linear-gradient(to right, #3d505d 0%, #647d8f 50%, #3d505d 100%);
   &::before {
     @extend .beforeAfter;
     background: $light-2;
     height: 1px;
-    
   }
   &::after {
     @extend .beforeAfter;
@@ -380,6 +374,7 @@ body {
   height: 60px;
   border: 2px solid $m-blue;
   border-radius: 99px;
+  background-color: #ffffff80;
   position: fixed;
   right: 50px;
   bottom: 60px;
@@ -391,11 +386,7 @@ body {
     color: $m-blue;
   }
   &:hover {
-    border: 2px solid lighten($m-blue, 15%);
     width: 53px;
-    i {
-      color: lighten($m-blue, 15%);
-    }
   }
 }
 //-----content-block
@@ -601,6 +592,30 @@ body {
     background: lighten(#e03c3e,10%);
   }
 }
+.game-favorite_pos {
+  top: 34px;
+}
+
+.app-link {
+  position: absolute;
+  z-index: 2;
+  right: 23px;
+  bottom: 8px;
+  i {
+    background-color: #0279fe;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 22px;
+    &:hover {
+      background-color:darken($m-blue, 15%);
+      color:darken(#fff, 15%);
+    }
+  }
+}
 
 .live-progress {
   width: 55%; 
@@ -614,30 +629,36 @@ body {
   line-height: 50px;
   color: $m-light;
 }
-.logo-game_0 {
-  background: url(../images/logo/logo0.png) no-repeat center;
-}
 .logo-game_1 {
   background: url(../images/logo/logo1.png) no-repeat center;
 }
-.logo-game_5 {
-  background: url(../images/logo/logo5.png) no-repeat center;
+.logo-game_2 {
+  background: url(../images/logo/logo2.png) no-repeat center;
 }
-.logo-game_17 {
-  background: url(../images/logo/logo17.png) no-repeat center;
+.logo-game_3 {
+  background: url(../images/logo/logo7.png) no-repeat center;
+}
+.logo-game_4 {
+  background: url(../images/logo/logo13.png) no-repeat center;
 }
 .logo-game {
-  background-color:#8a7a7a;
-  background-size: contain;
+  background-color:#e0e0e0;
+  background-size: 143px 48px;
   width: 100%;
   height: 50px;
   border-radius: 30px;
   border: 1px solid #ffffff;
   cursor: pointer;
+  color: #666; 
 }
 .logo-game:hover {
-  background-color:#966868;
+  background-color:#ebebeb;
   border: 1px solid #ffffff;
+}
+.logo-game {
+  input {
+    display: none;
+  }
 }
 
 //-----member-block
@@ -743,6 +764,12 @@ body {
   &:hover {
     background: $m-light;
   }
+}
+
+//store
+.store-logo {
+  width: 45px;
+  height: 45px;
 }
 
 //switch
@@ -1027,4 +1054,24 @@ body {
   left: 23px;
   top: -23px;
 }
+
+//-----app download
+.isotope-box {
+  width: 100%;
+}
+.isotope-item {
+  background-color: #FFF;
+  border: 1px solid $light-1;
+  border-radius: 10px;
+  width: 22.3%;
+  margin: 1%;
+}
+.isotope-img {
+  background: url(../images/app-QRcode.png) no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 250px;
+}
+
+
 
