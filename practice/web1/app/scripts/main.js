@@ -10,9 +10,46 @@ var page = document.querySelector('.pagination'); //分頁
 
 //預設首次的資料
 function initData(){
+    //下拉選單：過濾出 Zone 到 areaList 
+    var areaList = [];
+    for(var i=0; i<len; i++){
+        areaList.push(data[i].Zone);
+    }
+
+    //下拉選單：用 forEach 去判斷陣列裡面所有值是否有吻合
+    var area = [];
+            //所有撈出的 value 都會被丟進 forEach 判斷一次，value 表示每一個元素
+    areaList.forEach(function(value){
+            //indexOf 取得陣列的索引數，每跑一次迴圈會拿 value 去比對有沒有等於-1，等於時就把 value 塞進 area
+            //indexOf 找不到值時會顯示-1，第一次找值一定是空值所以顯示-1，第二次就不等於-1，以此方式過濾)
+        if (area.indexOf(value) == -1){
+            //console.log(value);
+            area.push(value);
+        }
+    });
+
+    //下拉選單：將 area 放進 DOM
+    for(i=0; i<area.length; i++){
+        var strArea = document.createElement('option');
+        strArea.textContent = area[i];
+        selectArea.appendChild(strArea);
+    }
+
     var str = '';
     for(var i=0; i<len; i++){
-        str += '<div class="col-md-6"><div class="card shadow-sm rounded mb-5"><h4 class="card-pic_title">'+data[i].Name+'</h4><p class="card-pic_text">'+data[i].Zone+'</p><div class="card-pic card-img-top" style="background: url('+data[i].Picture1+')"></div><div class="card-body"><p class="card-clock">'+data[i].Opentime+'</p><p class="card-pin">'+data[i].Add+'</p><p class="card-phone">'+data[i].Tel+'</p><p class="card-tag">'+data[i].Ticketinfo+'</p></div></div></div>';
+        str += 
+            '<div class="col-md-6">'
+            +'<div class="card shadow-sm rounded mb-5">'
+            +'<h4 class="card-pic_title">'+data[i].Name+'</h4><p class="card-pic_text">'+data[i].Zone+'</p>'
+            +'<div class="card-pic card-img-top" style="background: url('+data[i].Picture1+')"></div>'
+            +'<div class="card-body">'
+            +'<p class="card-clock">'+data[i].Opentime+'</p>'
+            +'<p class="card-pin">'+data[i].Add+'</p>'
+            +'<p class="card-phone">'+data[i].Tel+'</p>'
+            +'<p class="card-tag">'+data[i].Ticketinfo+'</p>'
+            +'</div>'
+            +'</div>'
+            +'</div>';
     }
     subject.innerHTML = '全部地區';
     setContent.innerHTML = str;
@@ -115,4 +152,5 @@ function preOrNext(go) {
         console.log('next',now)
     }
 }
+
 

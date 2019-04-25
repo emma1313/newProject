@@ -6,7 +6,7 @@ var data = JSON.parse(localStorage.getItem('listData')) || [];
 btn.addEventListener('click', addData);
 updateList(data);
 
-//加入列表，並同步更新網頁與localStorage
+//加入列表，並更新網頁與localStorage
 function addData(e) {
     //把預設的動作取消
     e.preventDefault();
@@ -56,10 +56,17 @@ function addData(e) {
         btnImg = 'color-five_bg';
     }
 
-    //更新按鈕外觀
-    btn.remove();
-    var str = '<div class="result-show d-flex flex-column justify-content-center ' + circle + '"><span class="level-value ' + text + '">' + bmi + '</span><span class="level-content ' + text + '">BMI</span><span class="level-btn ' + btnImg + ' ' + text + '"><img src="images/icons_loop.png"></img></span></div><div class="level-title ' + text + '">' + status + '</div>';
-    document.querySelector('.result').innerHTML = str;
+    //更新按鈕 
+    //[?]代表前面的字符最多只可以出现零次或一次
+    //[*]代表前面字符可以出现零次、一次或者多次
+    var re = /^[0-9]+.?[0-9]*$/;
+    if (re.test(cm) === true && re.test(kg) === true) {
+        btn.remove();
+        var str = '<div class="result-show d-flex flex-column justify-content-center ' + circle + '"><span class="level-value ' + text + '">' + bmi + '</span><span class="level-content ' + text + '">BMI</span><span class="level-btn ' + btnImg + ' ' + text + '"><img src="images/icons_loop.png"></img></span></div><div class="level-title ' + text + '">' + status + '</div>';
+        document.querySelector('.result').innerHTML = str;
+    } else {
+        alert('請輸入數字 ：）');
+    }
 
     //組合時間
     var date = new Date();
@@ -84,8 +91,11 @@ function addData(e) {
     updateList(data);
     //存進localStorage並轉型
     localStorage.setItem('listData', JSON.stringify(data));
-    //更新按鈕
-    document.querySelector('.result-show').addEventListener('click', addData);
+    //重整頁面
+    document.querySelector('.result-show').onclick = function (e) {
+        e.preventDefault();
+        window.location.reload();
+    };
 }
 
 //更新網頁內容
@@ -93,7 +103,7 @@ function updateList(items) {
     var str = '';
     var len = items.length;
     for (var i = len - 1; i >= 0; i--) {
-        str += '<div class="d-flex justify-content-center mb-3"><div class="cal-board d-flex justify-content-between"><div class="icon-cross" data-index=' + i + '></div><div class ="' + items[i].bar + '"></div><div class="w-20 pl-4"><span class="cal-bmi_set">' + items[i].status + '</span></div><div class="w-20"><span class="cal-bmi pr-2">BMI</span><span class="cal-bmi_set">' + items[i].bmi + '</span></div><div class="w-20"><span class="cal-bmi pr-2">weight</span><span class="cal-bmi_set">' + items[i].weight + '</span></div><div class="w-20"><span class="cal-bmi pr-2">height</span><span class="cal-bmi_set">' + items[i].height + '</span></div><div class="w-20 text-right pr-4"><span class="cal-bmi_date">' + items[i].today + '</span></div></div></div>';
+        str += '<div class="d-flex justify-content-center mb-3">' + '<div class="cal-board d-flex justify-content-between">' + '<div class="icon-cross" data-index=' + i + '></div>' + '<div class ="' + items[i].bar + '"></div>' + '<div class="w-20 pl-4"><span class="cal-bmi_set">' + items[i].status + '</span></div>' + '<div class="w-20"><span class="cal-bmi pr-2">BMI</span><span class="cal-bmi_set">' + items[i].bmi + '</span></div>' + '<div class="w-20"><span class="cal-bmi pr-2">weight</span><span class="cal-bmi_set">' + items[i].weight + '</span></div>' + '<div class="w-20"><span class="cal-bmi pr-2">height</span><span class="cal-bmi_set">' + items[i].height + '</span></div>' + '<div class="w-20 text-right pr-4"><span class="cal-bmi_date">' + items[i].today + '</span></div>' + '</div>' + '</div>';
     }
     content.innerHTML = str;
 }
