@@ -85,6 +85,7 @@ hr {
 .text-lS_l {
 	letter-spacing: 10px;
 }
+<<<<<<< HEAD
 
 /* flex box */
 .d-flex {
@@ -105,6 +106,8 @@ hr {
 .justify-content-around {
 	justify-content: space-around !important;
 }
+=======
+>>>>>>> master
 
 /* font-size */
 .fs-16 {
