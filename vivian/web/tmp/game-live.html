@@ -93,6 +93,7 @@
         <li class="nav-item"><a class="nav-link link-effect" href="game-lottery.html">彩票游戏</a></li>
         <li class="nav-item"><a class="nav-link link-effect" href="game-electronic.html">电子游戏</a></li>
         <li class="nav-item"><a class="nav-link link-effect" href="promotion.html">优惠活动</a></li>
+        <li class="nav-item"><a class="nav-link link-effect link-animate_blink" href="#" data-toggle="modal" data-target="#ModalFull">每日签到</a></li>
       </ul>
       <!--nav-shadow-->
       <div class="nav-shadow nav-shadow_pos"></div>
@@ -240,6 +241,93 @@
                 </div>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 登入 Modal-->
+    <div class="modal fade" id="ModalFull" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-full" role="document">
+        <div class="modal-content border-0">
+          <div class="modal-body p-0">
+            <button class="close p-4" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times m-dark" aria-hidden="true"></i></button>
+            <div class="row">
+              <div class="col-5">
+                <div class="modal-checkIn_side">
+                  <div class="checkIn-side_title d-flex justify-content-center">
+                    <h5 class="fadeInUp animated">百款遊戲讓你愛不釋手</h5>
+                  </div>
+                  <div class="checkIn-side_slider">
+                    <ul>
+                      <li><img src="./images/checkIn-slider1.png" alt="images slider1"></li>
+                      <li><img src="./images/checkIn-slider2.png" alt="images slider2"></li>
+                      <li><img src="./images/checkIn-slider3.png" alt="images slider3"></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-7">
+                <div class="modal-checkIn_main">
+                  <div class="box-shadow"></div>
+                  <div class="d-flex align-items-center ml-5">
+                    <div class="checkIn-main_days fadeInDown animated slow">本月簽到天數 <span>5 </span></div>
+                    <div class="d-flex justify-content-start flex-wrap ml-5 w-100"> 
+                      <h2 class="checkIn-main_title fadeInUp animated slow"><span>7</span>月簽到表</h2>
+                      <div class="checkIn-main_course fadeInUp animated delay-1s slow">
+                        <select class="course-select px-5">
+                          <option selected>簽到歷程</option>
+                          <option>本月</option>
+                          <option>前一個月</option>
+                          <option>前兩個月</option>
+                        </select>
+                      </div>
+                      <div class="checkIn-main_btn fadeInUp animated delay-1s slow">簽到</div>
+                      <div class="checkIn-main_date fadeInUp animated delay-1s slow">
+                        <div class="checkIn-day checkIn-day_checked">1</div>
+                        <div class="checkIn-day">2</div>
+                        <div class="checkIn-day checkIn-day_checked">3</div>
+                        <div class="checkIn-day">4</div>
+                        <div class="checkIn-day">5</div>
+                        <div class="checkIn-day checkIn-day_checked">6</div>
+                        <div class="checkIn-day checkIn-day_checked">7</div>
+                      </div>
+                      <div class="checkIn-main_date fadeInUp animated delay-1s slow">
+                        <div class="checkIn-day">8</div>
+                        <div class="checkIn-day">9</div>
+                        <div class="checkIn-day">10</div>
+                        <div class="checkIn-day">11</div>
+                        <div class="checkIn-day">12</div>
+                        <div class="checkIn-day">13</div>
+                        <div class="checkIn-day checkIn-day_checked">14</div>
+                      </div>
+                      <div class="checkIn-main_date fadeInUp animated delay-1s slow">
+                        <div class="checkIn-day">15</div>
+                        <div class="checkIn-day">16</div>
+                        <div class="checkIn-day checkIn-day_today">17</div>
+                        <div class="checkIn-day">18</div>
+                        <div class="checkIn-day">19</div>
+                        <div class="checkIn-day">20</div>
+                        <div class="checkIn-day">21</div>
+                      </div>
+                      <div class="checkIn-main_date fadeInUp animated delay-1s slow">
+                        <div class="checkIn-day">22</div>
+                        <div class="checkIn-day">23</div>
+                        <div class="checkIn-day">24</div>
+                        <div class="checkIn-day">25</div>
+                        <div class="checkIn-day">26</div>
+                        <div class="checkIn-day">27</div>
+                        <div class="checkIn-day">28</div>
+                      </div>
+                      <div class="checkIn-main_date fadeInUp animated delay-1s slow">
+                        <div class="checkIn-day">29</div>
+                        <div class="checkIn-day">30</div>
+                        <div class="checkIn-day">31</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

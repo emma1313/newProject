@@ -5290,6 +5290,7 @@ input[type="button"].btn-block {
 
 .close:not(:disabled):not(.disabled) {
   cursor: pointer;
+  outline: none;
 }
 
 button.close {
@@ -5352,6 +5353,16 @@ button.close {
   -ms-flex-align: center;
   align-items: center;
   min-height: calc(100% - (0.5rem * 2));
+}
+
+.modal-dialog-full {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #fff;
 }
 
 .modal-content {
@@ -5449,11 +5460,12 @@ button.close {
     max-width: 500px;
     margin: 1.75rem auto;
   }
-  .modal-dialog-centered {
-    min-height: calc(100% - (1.75rem * 2));
-  }
   .modal-sm {
     max-width: 300px;
+  }
+  .modal-dialog-full {
+    max-width: 100%;
+    margin: 0;
   }
 }
 

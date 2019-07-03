@@ -1,3 +1,9 @@
+＠font-face {
+	font-family: 'Libre Baskerville', serif;
+	src: url(../fonts/LibreBaskerville/LibreBaskerville-Regular.woff)format("woff"),
+		 url(../fonts/LibreBaskerville/LibreBaskerville-Regular.ttf)format("truetype"),
+		 url(../fonts/LibreBaskerville/LibreBaskerville-Regular.eot)format("embedded-opentype");
+}
 /* 1 Typography
 ----------------------------------------------------------------------------- */
 html {
@@ -70,11 +76,34 @@ hr {
 .vertical-m {
 	vertical-align: middle;
 }
+.text-l {
+	text-align: left;
+}
 .text-c {
 	text-align: center;
 }
 .text-lS_l {
 	letter-spacing: 10px;
+}
+
+/* flex box */
+.d-flex {
+	display: flex !important;
+}
+.flex-wrap {
+	flex-wrap: wrap !important;
+}
+.justify-content-end {
+	justify-content: flex-end !important;
+}
+.justify-content-center {
+	justify-content: flex-end !important;
+}
+.justify-content-between {
+	justify-content: space-between !important;
+}
+.justify-content-around {
+	justify-content: space-around !important;
 }
 
 /* font-size */
@@ -86,6 +115,9 @@ hr {
 }
 .fs-20 {
 	font-size: 20px;
+}
+.fs-30 {
+	font-size: 30px;
 }
 .fs-50 {
 	font-size: 50px;
@@ -366,8 +398,17 @@ svg rect {
 .w-30 {
     width: 30%;
 }
+.w-40 {
+    width: 40%;
+}
 .w-50 {
     width: 50%;
+}
+.w-60 {
+    width: 60%;
+}
+.w-70 {
+    width: 70%;
 }
 .w-100 {
     width: 100%;
@@ -1287,7 +1328,7 @@ svg rect {
   width: 38px;
   height: 38px;
   text-align: center;
-  background-color: #0c1622;
+  background-color: #081c33;
   box-shadow: 10px 0px 8px 0 rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 10px 0px 8px 0 rgba(0, 0, 0, 0.3);
 }
@@ -3394,18 +3435,15 @@ ul.pagination li > a:focus {
 /* Modals
 ---------------------------------- */
 .modal-open .page-wrapper {
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(5px);
-	-o-filter: blur(5px);
-	-ms-filter: blur(5px);
 	filter: blur(5px);
+}
+.modal-full {
+	width: 100%;
 }
 .modal-dialog {
 	margin: 30px auto;
 }
 .modal-content {
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
 	border-radius: 0px;
 	border: none;
 	position: relative;
@@ -3414,7 +3452,6 @@ ul.pagination li > a:focus {
 .modal-content .modal-header {
     background-color: #142132;
     border-bottom: 1px solid #1c4b8e;
-    -webkit-box-shadow: inset 0 -3px 5px 0 rgba(28, 75, 142, 0.3);
     box-shadow: inset 0 -3px 5px 0 rgba(28, 75, 142, 0.3);
 }
 .modal-content .modal-body div {
@@ -3604,7 +3641,6 @@ ul.pagination li > a:focus {
 	width: 700px;
 	height: 600px;
 	overflow: auto;
-	
 }
 .barCode-content {
 	width: 500px;
@@ -3614,12 +3650,195 @@ ul.pagination li > a:focus {
 .store-content::-webkit-scrollbar {
 	width: 12px;
 }
-
 .store-content::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
 }
+
+/* check in */
+.close-full {
+	position: absolute;
+	right: 20px;
+	width: 58px;
+    height: 58px;
+	cursor: pointer;
+	background: transparent;
+	border-radius: 99px;
+	border: none;
+	padding: 0;
+}
+.close-full:hover {
+	background: rgba(0, 163, 169, 0.5);	
+	transition: .2s;
+	outline: none;
+}
+.close-full span:nth-child(2)::before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 1px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: #ffffff;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+.close-full span:nth-child(2)::after {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 1px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: #ffffff;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+.modal-full_content {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: url(../images/modal-checkIn_bg.png) no-repeat center center;
+	background-size: cover;
+	display: flex;
+}
+.modal-content_title {
+	position: relative;
+	font-size: 36px;
+	text-align: center;
+	line-height: 44px;
+	color: #fff;
+	margin-bottom: 0;
+}
+.modal-content_prompt {
+	letter-spacing: 4px;
+	color: #0094ff;
+	text-align: center;
+    font-size: 18px;
+}
+.modal-content_checkInBtn {
+	position: relative;
+	margin: 2.2rem 5px;
+	width: 260px;
+	font-size: 20px;
+	line-height: 58px;
+	letter-spacing: 3px;
+	text-indent:15px;
+	background-color: rgba(0, 163, 169, 0.7);	
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 12px;
+	text-align: center;
+	transition: .2s;
+	color: #fff;
+	cursor: pointer;
+}
+.modal-content_checkInBtn::before {
+	content: "";
+	position: absolute;
+	left: 24px;
+	top: -5px;
+	width: 91px;
+	height: 83px;
+	background: url(../images/modal-check_paper.png) no-repeat top center;
+	background-size: 85%;
+}
+.modal-content_checkInBtn:hover:before {
+	filter: brightness(120%);
+}
+.modal-content_checkInBtn:hover {
+	background-color: rgba(0, 143, 148, 0.8);	
+}
+.modal-content_course {
+	margin: 2.2rem 5px;
+	transition: .2s;
+    width: 260px;
+	height: 60px;
+	font-size: 20px;
+	background-color: rgba(0, 163, 169, 0.7);	
+	border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+	padding: 0 5px;
+}
+.course_select {
+	margin-top: 10px;
+	width: 90%;
+	height: 40px;
+	background: transparent;
+	border: none;
+	color: #fff;
+	outline: none;	
+	cursor: pointer;
+}
+.modal-content_date {
+	width: 120px;
+	height: 78px;
+	border: 1px solid rgba(255, 255, 255, 0.7);
+	padding-right: 6px;
+	margin: 5px;
+	text-align: right;
+	color: #fff;
+	font-size: 28px;
+	font-family: 'Libre Baskerville', serif;
+	background: rgba(0, 0, 0, 0.5);
+}
+.modal-content_checkIn {
+	background: url(../images/modal-check.png) no-repeat center center;
+	background-size: 30%;
+	background-position: 10px 30px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content_today {
+	background: rgba(221, 80, 80, 0.7);
+}
+.modal-content_minor img {
+	width: 27%;
+    position: absolute;
+	bottom: 0;
+	left: 10%;
+}
+.bg-color-dark {
+	position: relative;
+	background: url(../images/modal-sign_bg.png) no-repeat 5px 20px;
+	background-size: 60%;
+}
+.bg-color-dark::before {
+	position: absolute;
+	left: 18px;
+	top: 40px;
+	content: "補簽";
+	font-size: 16px;
+}
+.bg-color-min {
+	position: relative;
+	background: url(../images/modal-sign_bg2.png) no-repeat 5px 20px;
+	background-size: 60%;
+}
+.bg-color-min::before {
+	position: absolute;
+	left: 18px;
+	top: 40px;
+	content: "簽到";
+	font-size: 16px;
+}
+.bg-color-min:hover,
+.bg-color-dark:hover {
+	cursor: pointer;
+	filter: brightness(150%);
+	transition: all 0.2s;
+}
+.bg-color-checked {
+	position: relative;
+	background: url(../images/modal-check.gif) no-repeat 5px 30px;
+	background-size: 50%;
+}
+.bg-color-checked::before {
+	position: absolute;
+	left: 18px;
+	top: 40px;
+	font-size: 16px;
+}
+
 
 /* Popups
 ---------------------------------- */
@@ -5201,6 +5420,9 @@ a.text-primary:focus {
 }
 
 /* margin */
+.mr-auto {
+	margin-right: auto !important;
+}
 .mt-0 {
 	margin-top: 0px !important;
 }
@@ -5210,17 +5432,23 @@ a.text-primary:focus {
 .mt-20 {
 	margin-top: 20px;
 }
-.mt-70 {
-	margin-top: 70px;
-}
 .mt-30 {
 	margin-top: 30px;
+}
+.mt-40 {
+	margin-top: 40px;
+}
+.mt-70 {
+	margin-top: 70px;
 }
 .mb-0 {
 	margin-bottom: 0px;
 }
 .mb-1 {
 	margin-bottom: 1rem;
+}
+.mb-10 {
+	margin-bottom: 10px;
 }
 .mb-20 {
 	margin-bottom: 20px;
@@ -5289,6 +5517,10 @@ a.text-primary:focus {
 }
 .px-0 {
 	padding: 0;
+}
+.px-20 {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .py-20 {
 	padding-top: 20px;
@@ -5467,6 +5699,32 @@ a.text-primary:focus {
     color: #f7c971;
     margin: auto 1rem;
 }
+.navbar-right_btn {
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px;
+	background-color: #4127b6;
+	padding: 0 5px;
+	margin-right: 1rem;
+	position: relative;
+	box-shadow: inset 0 -5px 0 0 #000000;
+}
+.navbar-right_btn:hover {
+	background-color: #4f32d1;
+	box-shadow: inset 0 -5px 0 0 #23023f;
+	transition: .5s;
+}
+.navbar-right_btn:hover .navbar-right_move {
+	animation: none;
+}
+.navbar-right_move {
+	animation: Move 1.2s ease infinite;
+}
+@keyframes Move {
+	0%, 20%, 53%, 80%, 100% {transform: translate3d(0,0,0);}
+	40%, 43% {transform: translate3d(0, -18px, 0);}
+	70% {transform: translate3d(0, -11px, 0);}
+	90% {transform: translate3d(0,-4px,0);}
+}
 .index-fav_icon {
 	visibility:hidden;
 	position: absolute;
@@ -5547,3 +5805,5 @@ a:hover > .app-i {
 	border: 1px solid #F9F3E9;
 	color: #F9F3E9;
 }
+
+

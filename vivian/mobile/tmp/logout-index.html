@@ -185,20 +185,86 @@
     <div class="nav-shadow mb-4">
       <div class="container">
         <div class="row">
-          <div class="col-12">
+          <div class="col-8">
             <!--跑馬燈 -->
-            <div class="marquee-box">
+            <div class="marquee-box mt-3">
               <svg class="marquee-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" xml:space="preserve">
                 <path class="st0" d="M375.4,169V76.7c0-4.8-2.6-9.1-6.9-11.3c-4.2-2.2-9.3-1.9-13.3,0.8c-91.8,63.5-144.5,71.6-180.1,71.6H73.2                        C32.8,137.9,0,170.7,0,211v27.2c0,40.3,32.8,73.2,73.2,73.2h48.9l53.1,128.7c2,4.9,6.8,7.9,11.8,7.9c1.7,0,3.2-0.3,4.9-0.9                        c6.6-2.7,9.6-10.1,7-16.7l-49.1-119H175c124.2,0,175,65.8,177.3,68.8c2.5,3.3,6.3,5.2,10.2,5.2c1.4,0,2.7-0.2,4-0.6                        c5.2-1.8,8.8-6.6,8.8-12.1v-92.2c25.4-5.9,44.3-28.5,44.3-55.7C419.8,197.6,400.8,174.8,375.4,169z M25.6,238.2V211                        c0-26.2,21.3-47.6,47.6-47.6h44.7v122.3H73.2C46.9,285.8,25.6,264.5,25.6,238.2z M349.8,341.8c-28.4-23.4-84.3-56-174.8-56h-31.6                        V163.5H175c36.6,0,89.1-7.5,174.8-62.7V341.8z M375.4,253.5v-57.6c11.1,4.9,18.7,16,18.7,28.9                        C394.2,237.5,386.5,248.6,375.4,253.5z"></path>
                 <path class="st0" d="M499.1,211.9h-50.1c-7.1,0-12.9,5.7-12.9,12.9s5.7,12.9,12.9,12.9h50.1c7.1,0,12.9-5.7,12.9-12.9                        C512,217.5,506.3,211.9,499.1,211.9z"></path>
                 <path class="st0" d="M431.3,184.9c2,5,6.8,8.2,11.9,8.2c1.6,0,3.1-0.3,4.7-0.8l48.5-19c6.6-2.6,9.8-10,7.2-16.6                        c-2.6-6.6-10-9.8-16.6-7.2l-48.5,19C432,170.9,428.8,178.3,431.3,184.9z"></path>
                 <path class="st0" d="M496.4,276.1l-48.5-19c-6.6-2.6-14,0.6-16.6,7.2c-2.6,6.6,0.6,14,7.2,16.6l48.5,19c1.6,0.6,3.1,0.8,4.7,0.8                        c5.1,0,9.9-3.1,11.9-8.2C506.3,286.1,503,278.7,496.4,276.1z"></path>
               </svg>
-              <marquee direction="up" scrollamount="2" height="36px" onmouseover="this.stop();" onmouseout="this.start();">
+              <marquee direction="up" scrollamount="2" height="25px" onmouseover="this.stop();" onmouseout="this.start();" style="vertical-align: middle;">
                 <div class="marquee-item" data-toggle="modal" data-target="#marqueeModal"><span class="marquee-item_tit">@Name:</span><span class="marquee-item_con">免費註冊免費註冊免費註冊免費註冊免費註冊免費註冊</span></div>
                 <div class="marquee-item" data-toggle="modal" data-target="#marqueeModal"><span class="marquee-item_tit">@Name:</span><span class="marquee-item_con">This is the first tweet.</span></div>
                 <div class="marquee-item" data-toggle="modal" data-target="#marqueeModal"><span class="marquee-item_tit">@Name:</span><span class="marquee-item_con">免費註冊免費註冊免This is the first tweet.</span></div>
               </marquee>
+            </div>
+          </div>
+          <div class="col-4 d-flex align-items-center">
+            <!--簽到-->
+            <div class="checkIn mt-3 fadeInUp animated slow" data-toggle="modal" data-target="#checkInModal">簽到</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 簽到 Modal-->
+    <div class="modal fade" id="checkInModal" tabindex="-1" role="dialog" aria-labelledby="checkInModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">7月簽到表</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times m-dark" aria-hidden="true"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="row py-1">
+              <div class="col-12 mb-4">
+                <h6 class="m-grayLight mb-3">本月已簽到 5 日</h6>
+                <select class="custom-select">
+                  <option selected>簽到歷程</option>
+                  <option>本月</option>
+                  <option>前一個月</option>
+                  <option>前兩個月</option>
+                </select>
+              </div>
+              <div class="col-12 mb-4">
+                <div class="d-flex justify-content-start flex-wrap">
+                  <div class="checkIn-day checkIn-day_checked">1</div>
+                  <div class="checkIn-day">2</div>
+                  <div class="checkIn-day checkIn-day_checked">3</div>
+                  <div class="checkIn-day checkIn-day_checked">4</div>
+                  <div class="checkIn-day">5</div>
+                  <div class="checkIn-day">6</div>
+                  <div class="checkIn-day checkIn-day_checked">7</div>
+                  <div class="checkIn-day">8</div>
+                  <div class="checkIn-day checkIn-day_checked">9</div>
+                  <div class="checkIn-day">10</div>
+                  <div class="checkIn-day">11</div>
+                  <div class="checkIn-day">12</div>
+                  <div class="checkIn-day">13</div>
+                  <div class="checkIn-day checkIn-day_today">14</div>
+                  <div class="checkIn-day">15</div>
+                  <div class="checkIn-day">16</div>
+                  <div class="checkIn-day">17</div>
+                  <div class="checkIn-day">18</div>
+                  <div class="checkIn-day">19</div>
+                  <div class="checkIn-day">20</div>
+                  <div class="checkIn-day">21</div>
+                  <div class="checkIn-day">22</div>
+                  <div class="checkIn-day">23</div>
+                  <div class="checkIn-day">24</div>
+                  <div class="checkIn-day">25</div>
+                  <div class="checkIn-day">26</div>
+                  <div class="checkIn-day">27</div>
+                  <div class="checkIn-day">28</div>
+                  <div class="checkIn-day">29</div>
+                  <div class="checkIn-day">30</div>
+                  <div class="checkIn-day">31</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100" type="submit"> <i class="fas fa-calendar-check mr-2"></i>簽到</button>
+              </div>
             </div>
           </div>
         </div>

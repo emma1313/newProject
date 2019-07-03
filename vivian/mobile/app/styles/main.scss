@@ -416,7 +416,7 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
 //-------------------------slider end
 
 
-//-------------------------slider start
+//-------------------------index marquee start
 .marquee-box {
   position: relative;
   height: 36px;
@@ -451,7 +451,54 @@ body { background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, white 50%, r
   font-weight: 500;
   margin-right: 0.15em;
 }
-//-------------------------slider end
+//-------------------------index marquee end
+
+
+//-------------------------index check in start
+.checkIn {
+  width: 100%;
+  height: 25px;
+  line-height: 23px;
+  text-align: center;
+  border: 1px solid #e50752;
+  color: #fff;
+  animation:line 1s infinite linear;
+}
+@keyframes line  {
+  0%{
+    color:#ce0648;
+  }
+  20%{
+    color:#ff397b;
+    box-shadow:0 0 2px #ff6d9d,0 0 4px #ff508b;
+  }
+  100%{
+    color:#ce0648;
+  }
+}
+.checkIn-day {
+  width: 38px;
+  height: 38px;
+  line-height: 36px;
+  font-family: 'Questrial', sans-serif;
+  text-align: center;
+  border-radius: 38px;
+  margin: .2rem;
+  color: #007bff;
+  border: 1px solid #b1d7ff;
+  background-color: #b1d7ff;
+}
+.checkIn-day_today {
+  color: #fff;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+}
+.checkIn-day_checked {
+  color: #0267d4;
+  border: 1px solid #6aa1dd;
+  background-color: #6aa1dd;
+}
+//-------------------------index check in end
 
 
 //-------------------------index main block start

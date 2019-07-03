@@ -12,9 +12,9 @@
 .nav-shadow.mb-4
     .container
         .row
-            .col-12
+            .col-8
                 //跑馬燈 
-                .marquee-box
+                .marquee-box.mt-3
                     svg.marquee-icon(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 512 512', xml:space='preserve')
                         path.st0(d='M375.4,169V76.7c0-4.8-2.6-9.1-6.9-11.3c-4.2-2.2-9.3-1.9-13.3,0.8c-91.8,63.5-144.5,71.6-180.1,71.6H73.2\
                         C32.8,137.9,0,170.7,0,211v27.2c0,40.3,32.8,73.2,73.2,73.2h48.9l53.1,128.7c2,4.9,6.8,7.9,11.8,7.9c1.7,0,3.2-0.3,4.9-0.9\
@@ -29,7 +29,7 @@
                         c-2.6-6.6-10-9.8-16.6-7.2l-48.5,19C432,170.9,428.8,178.3,431.3,184.9z')
                         path.st0(d='M496.4,276.1l-48.5-19c-6.6-2.6-14,0.6-16.6,7.2c-2.6,6.6,0.6,14,7.2,16.6l48.5,19c1.6,0.6,3.1,0.8,4.7,0.8\
                         c5.1,0,9.9-3.1,11.9-8.2C506.3,286.1,503,278.7,496.4,276.1z')
-                    marquee(direction='up', scrollamount='2', height="36px", onmouseover='this.stop();', onmouseout='this.start();')
+                    marquee(direction='up', scrollamount='2', height="25px", onmouseover='this.stop();', onmouseout='this.start();', style='vertical-align: middle;')
                         .marquee-item(data-toggle='modal', data-target='#marqueeModal')
                             span.marquee-item_tit @Name:
                             span.marquee-item_con 免費註冊免費註冊免費註冊免費註冊免費註冊免費註冊
@@ -39,7 +39,63 @@
                         .marquee-item(data-toggle='modal', data-target='#marqueeModal')
                             span.marquee-item_tit @Name:
                             span.marquee-item_con 免費註冊免費註冊免This is the first tweet.
-
+            .col-4.d-flex.align-items-center
+                //簽到
+                .checkIn.mt-3.fadeInUp.animated.slow(data-toggle='modal', data-target='#checkInModal') 簽到
+// 簽到 Modal
+.modal.fade#checkInModal(tabindex='-1', role='dialog', aria-labelledby='checkInModal', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+            .modal-header
+                h5.modal-title 7月簽到表
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    i.fas.fa-times.m-dark(aria-hidden='true')
+            .modal-body
+                .row.py-1
+                    .col-12.mb-4
+                        h6.m-grayLight.mb-3 本月已簽到 5 日
+                        select.custom-select
+                            option(selected) 簽到歷程
+                            option 本月
+                            option 前一個月
+                            option 前兩個月
+                    .col-12.mb-4
+                        .d-flex.justify-content-start.flex-wrap
+                            .checkIn-day.checkIn-day_checked 1
+                            .checkIn-day 2
+                            .checkIn-day.checkIn-day_checked 3
+                            .checkIn-day.checkIn-day_checked 4
+                            .checkIn-day 5
+                            .checkIn-day 6
+                            .checkIn-day.checkIn-day_checked 7
+                            .checkIn-day 8
+                            .checkIn-day.checkIn-day_checked 9
+                            .checkIn-day 10
+                            .checkIn-day 11
+                            .checkIn-day 12
+                            .checkIn-day 13
+                            .checkIn-day.checkIn-day_today 14
+                            .checkIn-day 15
+                            .checkIn-day 16
+                            .checkIn-day 17
+                            .checkIn-day 18
+                            .checkIn-day 19
+                            .checkIn-day 20
+                            .checkIn-day 21
+                            .checkIn-day 22
+                            .checkIn-day 23
+                            .checkIn-day 24
+                            .checkIn-day 25
+                            .checkIn-day 26
+                            .checkIn-day 27
+                            .checkIn-day 28
+                            .checkIn-day 29
+                            .checkIn-day 30
+                            .checkIn-day 31
+                    .col-12
+                        button.btn.btn-primary.w-100(type='submit') 
+                            i.fas.fa-calendar-check.mr-2
+                            |簽到
 // 跑馬燈 Modal
 .modal.fade#marqueeModal(tabindex='-1', role='dialog', aria-labelledby='marqueeModal', aria-hidden='true')
     .modal-dialog.modal-dialog-centered(role='document')
@@ -53,6 +109,7 @@
                     .col-12.mb-4
                         h5 標題標題標題標題
                         p 免費註冊免費註冊免費註冊免費註冊免費註冊免費註冊
+                    
 
 
 

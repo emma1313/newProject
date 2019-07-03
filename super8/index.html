@@ -28,7 +28,6 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link href="css/custom.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -80,6 +79,12 @@
 						<!-- header-top-first start -->
 						<!-- ================ -->
 						<div class="clearfix navbar-right">
+							<div class="navbar-right_favorite navbar-right_btn fl animated bounce">
+								<a href="#" data-toggle="modal" data-target="#myModal2">
+									<i class="fa fa-calendar-check-o navbar-right_move" aria-hidden="true"></i>
+									每日簽到
+								</a>
+							</div>
 							<div class="navbar-right_favorite fl">
 								<a href="favorite.html">
 									<i class="fa fa-download" aria-hidden="true"></i>
@@ -367,35 +372,21 @@
 		
 	</div>
 
-	  <style>
-
-		.swiper{
-			  background-color: #2b2984;
-		}
+	<style>
+		.swiper{background-color: #2b2984;}
 		.swiper-container {
-		  width: 100%;
-		  height: 100%;
-		  /* background-color: #202223; */
-		  height: 200px;
+			width: 100%;
+			height: 100%;
+			height: 200px;
 		}
 		.swiper-slide {
-		  text-align: center;
-		  font-size: 18px;
-	
-		  /* Center slide text vertically */
-		  display: -webkit-box;
-		  display: -ms-flexbox;
-		  display: -webkit-flex;
-		  display: flex;
-		  -webkit-box-pack: center;
-		  -ms-flex-pack: center;
-		  -webkit-justify-content: center;
-		  justify-content: center;
-		  -webkit-box-align: center;
-		  -ms-flex-align: center;
-		  -webkit-align-items: center;
-		  align-items: center;
-		}</style>
+			text-align: center;
+			font-size: 18px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
 	<!-- footer start -->
 	<!-- ================ -->
 	<div class="footer">
@@ -415,7 +406,7 @@
 
     <!-- PAGE 1 -------------------->
     <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-signin">
+        <div class="modal-signin">
             <div class="header-top-dropdown signin">
                 <div class="btn-group dropdown open">
                       <ul class="dropdown-menu dropdown-animation">
@@ -447,9 +438,75 @@
                       </ul>
                 </div>
             </div>
-      </div>
+        </div>
     </div>
     <!-- /PAGE 1 -------------------->
+    <!-- PAGE 2 -------------------->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aira-labelledby="myModal1Label"  aria-hidden="true">
+		<div class="modal-full">
+			<div class="modal-full_content p-20">
+				<button type="button" class="close-full" data-dismiss="modal" aria-hidden="true">
+					<span></span>
+					<span></span>
+					<span class="sr-only">關閉</span>
+				</button>
+				<div class="w-40">
+					<div class="modal-content_minor">
+						<img class="fadeInLeft animated" src="images/modal-check_girl.png" alt="">
+					</div>
+				</div>
+				<div class="w-60">
+					<p class="modal-content_title mt-40 fadeInUp animated">6月簽到表</p>
+					<p class="modal-content_prompt mb-10 fadeInUp animated">本月已簽到5日</p>
+					<div class="d-flex justify-content-start px-20">
+						<div class="modal-content_checkInBtn fadeInUp animated">簽到</div>
+						<div class="modal-content_course d-flex justify-content-around fadeInUp animated">
+							<select class="course_select">
+								<option selected>簽到歷程</option>
+								<option value="">本月</option>
+								<option value="">前一個月</option>
+								<option value="">前兩個月</option>
+							</select>
+						</div>
+					</div>
+					<div class="d-flex justify-content-start flex-wrap px-20 fadeInUp animated">
+						<div class="modal-content_date">1</div>
+						<div class="modal-content_date">2</div>
+						<div class="modal-content_date modal-content_checkIn">3</div>
+						<div class="modal-content_date">4</div>
+						<div class="modal-content_date">5</div>
+						<div class="modal-content_date modal-content_checkIn">6</div>
+						<div class="modal-content_date">7</div>
+						<div class="modal-content_date">8</div>
+						<div class="modal-content_date modal-content_checkIn">9</div>
+						<div class="modal-content_date modal-content_checkIn">10</div>
+						<div class="modal-content_date">11</div>
+						<div class="modal-content_date">12</div>
+						<div class="modal-content_date">13</div>
+						<div class="modal-content_date modal-content_checkIn">14</div>
+						<div class="modal-content_date">15</div>
+						<div class="modal-content_date modal-content_today">16</div>
+						<div class="modal-content_date">17</div>
+						<div class="modal-content_date">18</div>
+						<div class="modal-content_date">19</div>
+						<div class="modal-content_date">20</div>
+						<div class="modal-content_date">21</div>
+						<div class="modal-content_date">22</div>
+						<div class="modal-content_date">23</div>
+						<div class="modal-content_date">24</div>
+						<div class="modal-content_date">25</div>
+						<div class="modal-content_date">26</div>
+						<div class="modal-content_date">27</div>
+						<div class="modal-content_date">28</div>
+						<div class="modal-content_date">29</div>
+						<div class="modal-content_date">30</div>
+						<div class="modal-content_date">31</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- /PAGE 2 -------------------->
 
 	<!-- Jquery and Bootstap core js files -->
 	<script type="text/javascript" src="plugins/jquery.min.js"></script>
@@ -496,31 +553,31 @@
     <script src="plugins/marquee/jquery-2.1.3.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script>
-var swiper = new Swiper('.swiper-container', {
-  // Default parameters
-  loop:true,
-  autoplay:true,
-  slidesPerView: 5,
-  spaceBetween: 5,
-  // Responsive breakpoints
-  breakpoints: {
-    // when window width is <= 320px
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
-    // when window width is <= 480px
-    480: {
-      slidesPerView: 3,
-      spaceBetween: 10
-    },
-    // when window width is <= 640px
-    640: {
-      slidesPerView: 5,
-      spaceBetween: 5
-    }
-  }
-})
-	  </script>
+	var swiper = new Swiper('.swiper-container', {
+		// Default parameters
+		loop:true,
+		autoplay:true,
+		slidesPerView: 5,
+		spaceBetween: 5,
+		// Responsive breakpoints
+		breakpoints: {
+			// when window width is <= 320px
+			320: {
+			slidesPerView: 2,
+			spaceBetween: 10
+			},
+			// when window width is <= 480px
+			480: {
+			slidesPerView: 3,
+			spaceBetween: 10
+			},
+			// when window width is <= 640px
+			640: {
+			slidesPerView: 5,
+			spaceBetween: 5
+			}
+		}
+	})
+	</script>
 </body>
 </html>

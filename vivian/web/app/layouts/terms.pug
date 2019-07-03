@@ -11,6 +11,8 @@
             a.nav-link.link-effect(href="game-electronic.html") 电子游戏
         li.nav-item
             a.nav-link.link-effect(href="promotion.html") 优惠活动
+        li.nav-item
+            a.nav-link.link-effect.link-animate_blink(href="#", data-toggle='modal', data-target='#ModalFull') 每日签到
     //nav-shadow
     .nav-shadow.nav-shadow_pos
 
@@ -103,3 +105,77 @@
                         p 享用菲律宾公司s8娱乐城-Super8提供的服务是会员本人的意愿，其风险应由会员本人承担。参与我们服务的同时就说明会员认同菲律宾公司s8娱乐城-Super8所提供的服务是正常、合理、公正、公平的
                         p 如果按照会员当地法律博彩属不合法行为，菲律宾公司s8娱乐城-Super8不提倡您参与我们的服务。在博彩被视为不合法行为的任何国家菲律宾公司s8娱乐城-Super8不提倡其国民加入。如果会员因为参与菲律宾公司s8娱乐城-Super8的服务而触犯当地之法律，菲律宾公司s8娱乐城-Super8不负任何责任。
                         p 虽然菲律宾公司s8娱乐城-Super8尽力确保网站提供24小时服务，但如果出于不可抗拒的因素使您无法访问网站（例如，服务器遭受攻击，海底光缆遭到破坏等），Super8概不负责。或是由于第三方对公司网站和信息提供的服务（比如无线通讯的提供者等）而导致的拖延、违约、或不提供服务的情况，亦菲律宾公司s8娱乐城-Super8不提供担保也不承担责任。
+
+// 登入 Modal
+.modal.fade#ModalFull(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+    .modal-dialog.modal-dialog-full(role='document')
+        .modal-content.border-0
+            .modal-body.p-0
+                button.close.p-4(type='button', data-dismiss='modal', aria-label='Close')
+                    i.fas.fa-times.m-dark(aria-hidden='true')
+                .row
+                    .col-5
+                        .modal-checkIn_side
+                            .checkIn-side_title.d-flex.justify-content-center
+                                h5.fadeInUp.animated 百款遊戲讓你愛不釋手
+                            .checkIn-side_slider
+                                ul
+                                    li
+                                        img(src="./images/checkIn-slider1.png", alt="images slider1")
+                                    li
+                                        img(src="./images/checkIn-slider2.png", alt="images slider2")
+                                    li
+                                        img(src="./images/checkIn-slider3.png", alt="images slider3")
+                    .col-7
+                        .modal-checkIn_main
+                            .box-shadow
+                            .d-flex.align-items-center.ml-5
+                                .checkIn-main_days.fadeInDown.animated.slow 本月簽到天數 
+                                    span 5 
+                                .d-flex.justify-content-start.flex-wrap.ml-5.w-100 
+                                        h2.checkIn-main_title.fadeInUp.animated.slow
+                                            span 7
+                                            |月簽到表
+                                        .checkIn-main_course.fadeInUp.animated.delay-1s.slow
+                                            select.course-select.px-5
+                                                option(selected) 簽到歷程
+                                                option 本月
+                                                option 前一個月
+                                                option 前兩個月
+                                        .checkIn-main_btn.fadeInUp.animated.delay-1s.slow 簽到
+                                        .checkIn-main_date.fadeInUp.animated.delay-1s.slow
+                                            .checkIn-day.checkIn-day_checked 1
+                                            .checkIn-day 2
+                                            .checkIn-day.checkIn-day_checked 3
+                                            .checkIn-day 4
+                                            .checkIn-day 5
+                                            .checkIn-day.checkIn-day_checked 6
+                                            .checkIn-day.checkIn-day_checked 7
+                                        .checkIn-main_date.fadeInUp.animated.delay-1s.slow
+                                            .checkIn-day 8
+                                            .checkIn-day 9
+                                            .checkIn-day 10
+                                            .checkIn-day 11
+                                            .checkIn-day 12
+                                            .checkIn-day 13
+                                            .checkIn-day.checkIn-day_checked 14
+                                        .checkIn-main_date.fadeInUp.animated.delay-1s.slow
+                                            .checkIn-day 15
+                                            .checkIn-day 16
+                                            .checkIn-day.checkIn-day_today 17
+                                            .checkIn-day 18
+                                            .checkIn-day 19
+                                            .checkIn-day 20
+                                            .checkIn-day 21
+                                        .checkIn-main_date.fadeInUp.animated.delay-1s.slow
+                                            .checkIn-day 22
+                                            .checkIn-day 23
+                                            .checkIn-day 24
+                                            .checkIn-day 25
+                                            .checkIn-day 26
+                                            .checkIn-day 27
+                                            .checkIn-day 28
+                                        .checkIn-main_date.fadeInUp.animated.delay-1s.slow
+                                            .checkIn-day 29
+                                            .checkIn-day 30
+                                            .checkIn-day 31                        
