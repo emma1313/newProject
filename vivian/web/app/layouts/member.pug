@@ -256,20 +256,20 @@
                                     form.needs-validation(novalidate)
                                         .form-group.row
                                             label.col-2.col-form-label.d-flex.justify-content-end 舊登入密碼
-                                            .col-10.d-flex.align-items-center
+                                            .col-10
                                                 input#input-password_old.form-control.w-40(type='password', placeholder='******' required)
                                                 i#i-password_old.far.fa-eye-slash.fa-lg.c-blue.cursor-p.member-i_inside(onclick="hideShowPswOld()")
                                                 .invalid-feedback 請輸入舊登入密碼
                                         .form-group.row
                                             label.col-2.col-form-label.d-flex.justify-content-end 新登入密碼
-                                            .col-10.d-flex.align-items-center
-                                                input#input-password.form-control.w-40.float-left(type='password', placeholder='******' required)
+                                            .col-10
+                                                input#input-password.form-control.w-40(type='password', placeholder='******' required)
                                                 i#i-password.far.fa-eye-slash.fa-lg.c-blue.cursor-p.member-i_inside(onclick="hideShowPsw()")
                                                 .invalid-feedback 請輸入新登入密碼
                                         .form-group.row
                                             label.col-2.col-form-label.d-flex.justify-content-end 確認新登入密碼
-                                            .col-10.d-flex.align-items-center
-                                                input#input-password-confirm.form-control.w-40.float-left(type='password', placeholder='******' required)
+                                            .col-10
+                                                input#input-password-confirm.form-control.w-40(type='password', placeholder='******' required)
                                                 i#i-password-confirm.far.fa-eye-slash.fa-lg.c-blue.cursor-p.member-i_inside(onclick="hideShowPsw2()")
                                                 .invalid-feedback 請輸入新登入密碼
                                         //btn 

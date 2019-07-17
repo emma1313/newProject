@@ -937,6 +937,11 @@ body {
 .member-i_inside {
   position: absolute;
   left:36%;
+  top: 35%;
+}
+
+.was-validated .form-control:invalid ~ .member-i_inside {
+  top: 20%;
 }
 
 .member-transfer_svg {
@@ -1098,6 +1103,11 @@ body {
 .icon-inside {
   position: absolute;
   left: 65%;
+  top: 30%;
+}
+
+.was-validated .form-control:invalid ~ .icon-inside {
+  top: 20%;
 }
 
 //-----agent
