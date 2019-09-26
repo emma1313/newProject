@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Updating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet"></head>
+<body>
+<div class="bg-img kenburns-top"></div>
+<div id="particles-js"></div>
+<div class="main">
+  <div class="main-tc">
+    <h1 class="main-title focus-in-expand">系統升級中</h1>
+    <h1 class="main-title">系统升级中</h1>
+    <h1 class="main-title">UPDATING</h1>
+    <h1 class="main-title">Thông báo nâng cấp hệ thống</h1>
+    <p class="main-content focus-in-expand">為了提供您良好的服務，本網站正在進行系統更新。感謝您的支持，造成不便，敬請見諒</p>
+    <p class="main-content">为了提供您良好的服务，本网站正在进行系统更新。感谢您的支持，造成不便，敬请见谅</p>
+    <p class="main-content">In order to provide you with good service, this website is undergoing a system update. Thank you for your support, causing inconvenience, please forgive us.</p>
+    <p class="main-content">Để có thể cung cấp tới hội viên dịch vụ tốt nhất, đang tiến hành cập nhật hệ thống. Cảm ơn vì sự hợp tác của các bạn, xin thứ lỗi vì bất kì sự bất tiện nào gây ra tới quý khách. Trân trọng cảm ơn !</p>
+  </div>
+  <p class="main-time">2019-07-17 <span class="c-light">10:00</span> ~ 2019-07-17 <span class="c-light">13:00</span></p>
+</div>
+
+<!-- scripts -->
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<!-- stats.js -->
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+</body>
+</html>
